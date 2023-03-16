@@ -57,6 +57,11 @@
             line-height: 1.5rem;
             margin: auto;
         }
+        i.iconBtn:hover {
+          color: #008db3 !important;
+          border: #008db3 3px solid !important;
+
+        }
     </style>
     <!--Dropdowns in the nav open on hover
     <script type="text/javascript">
@@ -69,9 +74,35 @@
                 }
             });
         });  -->
-        <script type="text/javascript">   
+        <script type="text/javascript"> 
+        window.addEventListener('load',function(){  
        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+      });
+      function whoAmI(){
+          document.getElementById('whoAmIBtn').click();
+      }
+      function home(){
+          document.getElementById('homeBtn').click();
+      }
+      function contact(){
+          document.getElementById('contactBtn').click();
+      }
+      function projects(){
+          document.getElementById('projectsBtn').click();
+      }
+      function ats1665(){
+          document.getElementById('ats1665Btn').click();
+      }
+      function beest(){
+          document.getElementById('beestBtn').click();
+      }
+      function mdDesign(){
+          document.getElementById('mdDesignBtn').click();
+      }
+      function sources(){
+          document.getElementById('sourcesBtn').click();
+      }
     </script>
   </head>
   <body>
@@ -90,6 +121,12 @@
             <li class="nav-item" role="presentation">
                 <a id="homeBtn" class="nav-link active" href="#home" data-bs-toggle="tab">Home</a>
             </li>
+            <li class="nav-item d-none" role="presentation">
+              <a id="projectsBtn" class="nav-link" href="#projects" data-bs-toggle="tab">Projects</a>
+          </li>
+            <li class="nav-item" role="presentation">
+              <a id="whoAmIBtn" class="nav-link" href="#whoAmI" data-bs-toggle="tab">Who Am I?</a>
+          </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Projects</a>
                 <ul class="dropdown-menu">
@@ -112,49 +149,79 @@
       <div class="tab-pane fade show active" id="home" role="tabpanel">
         <h1 class="p-2 text-center">Tim Scholl - Educational Designer with a UX Twist</h1>
         <div class="row w-50 mx-auto mt-3">
-          <div class="col-lg-8 my-auto">
+          <div class="col-lg-8 my-auto" onclick="whoAmI()" role="button">
             <h2>Who Am I?</h2>
             <p>Who am I? What is my story? What led me to being involved in educational design? This section is where I do my best to answer all these questions and tell you how I got to where I am now.</p>
           </div>
-          <div class="col-lg my-auto text-center"><i class="fa-solid fa-person-circle-question fa-10x text-ts"></i></div>
+          <div class="col-lg my-auto text-center"><i onclick="whoAmI()" role="button" id="whoAmIIcon" class="fa-solid fa-person-circle-question fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn"></i>
+          </div>
         </div>
         <hr class="w-50 mx-auto">
         <div class="row w-50 mx-auto">
-          <div class="col-lg-8 my-auto">
+          <div class="col-lg-8 my-auto" onclick="projects()" role="button">
             <h2>Projects</h2>
             <p>Everything I've created or am creating to do with Blended and Online Learning that I'm able to present is here. I try to keep everything as transparent and accessible as possible.</p>
         </div>
-          <div class="col-lg my-auto text-center"><i class="fa-solid fa-users-between-lines fa-10x text-ts"></i></div>
+          <div class="col-lg my-auto text-center"><i onclick="projects()" role="button" id="projectsIcon" class="fa-solid fa-users-between-lines fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn"></i></div>
         </div>
         <hr class="w-50 mx-auto">
         <div class="row w-50 mx-auto">
-          <div class="col-lg-8 my-auto">
+          <div class="col-lg-8 my-auto" onclick="contact()" role="button">
             <h2>Contact Me</h2>
             <p>Want to get in touch and talk design, education or feedback about my projects? Here's everywhere you can get in touch with me however you like to connect with new people.</p>
           </div>
-          <div class="col-lg my-auto text-center"><i class="fa-solid fa-at fa-10x text-ts"></i></div>
+          <div class="col-lg my-auto text-center"><i onclick="contact()" role="button" id="contactIcon" class="fa-solid fa-at fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn"></i></div>
         </div>
         <hr class="w-50 mx-auto">
         <div class="row w-50 mx-auto">
-          <div class="col-lg-8 my-auto">
+          <div class="col-lg-8 my-auto" onclick="sources()" role="button">
             <h2>Sources</h2>
             <p>Where did I get all these cool icons? What am I reading and listening to to keep in touch with what's important in my career?</p>
           </div>
-          <div class="col-lg my-auto text-center"><i class="fa-solid fa-bookmark fa-10x text-ts"></i></div>
+          <div class="col-lg my-auto text-center"><i onclick="sources()" role="button" id="sourcesIcon" class="fa-solid fa-bookmark fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn"></i></div>
         </div>
+      </div>
+      <div class="tab-pane fade" id="whoAmI" role="tabpanel">
+        <h1 class="p-2 text-center">Who Am I?</h1>
+        <h5 class="text-center">A teaching and learning fanatic with a flair for UX design</h5>
+      </div>
+      <div class="tab-pane fade" id="projects" role="tabpanel">
+        <h1 class="p-2 text-center">Projects</h1>
+        <div class="row">
+          <div class="col-lg">
+            <div role="button" onclick="ats1665()">
+            <h3 class="text-center">ATS1665 - Understanding Gender 1</h3>
+            <p class="text-center">The highest quality online undergraduate unit you can make</p>
+            <p class="text-center"><i class="fa-solid fa-venus-mars fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
+          </div>
+          </div>
+          <div class="col-lg">
+            <h3 class="text-center">BEEST - <strong>B</strong>ootstrap <strong>E</strong>nhanced <strong>E</strong>lement <strong>S</strong>treamlining <strong>T</strong>ool</h3>
+            <p class="text-center">Simplifying Advanced HTML Element Design</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg">
+            <h3 class="text-center">MD Design - Postgraduate Studies in Medicine</h3>
+            <p class="text-center">Transforming How Future Doctors Study</p>
+          </div>
+        </div>     
       </div>
       <div class="tab-pane fade" id="ats1665" role="tabpanel">
         <h1 class="p-2 text-center">Project - ATS1665 - Understanding Gender 1</h1>
-        <h3 class="text-center">The higest quality online undergraduate unit you can make</h3>
+        <h5 class="text-center">The highest quality online undergraduate unit you can make</h5>
       </div>
       <div class="tab-pane fade" id="beest" role="tabpanel">
-        <h1 class="p-2">BEEST - Simplifying Advanced HTML Element Design</h1>
+        <h1 class="p-2 text-center">BEEST - <strong>B</strong>ootstrap <strong>E</strong>nhanced <strong>E</strong>lement <strong>S</strong>treamlining <strong>T</strong>ool</h1>
+        <h5 class="text-center">Simplifying Advanced HTML Element Design</h5>
       </div>
       <div class="tab-pane fade" id="mdDesign" role="tabpanel">
-        <h1 class="p-2">MD Design - Postgraduate Study in Medicine</h1>
+        <h1 class="p-2 text-center">MD Design - Postgraduate Studies in Medicine</h1>
+          <h5 class="text-center">Transforming How Future Doctors Study</h5>
       </div>
       <div class="tab-pane fade" id="contact" role="tabpanel">
-        <h1 class="p-2">Contact Me</h1>
+        <h1 class="p-2 text-center">Contact Me</h1>
+        <h5 class="text-center">Get in touch</h5>
         <div class="row">
           <div class="col-lg">
           </div>
@@ -163,7 +230,8 @@
         </div>
       </div>
       <div class="tab-pane fade" id="sources" role="tabpanel">
-        <h1 class="p-2">Sources</h1>
+        <h1 class="p-2 text-center">Sources</h1>
+        <h5 class="text-center">What I read and listen to</h5>
       </div>
     </div>
   </div>
