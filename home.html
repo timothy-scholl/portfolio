@@ -81,21 +81,27 @@
       });
       function whoAmI(){
           document.getElementById('whoAmIBtn').click();
+          
       }
       function home(){
           document.getElementById('homeBtn').click();
+        
       }
       function contact(){
           document.getElementById('contactBtn').click();
+         
       }
       function projects(){
           document.getElementById('projectsBtn').click();
+          
       }
       function ats1665(){
           document.getElementById('ats1665Btn').click();
+         
       }
       function beest(){
           document.getElementById('beestBtn').click();
+          
       }
       function mdDesign(){
           document.getElementById('mdDesignBtn').click();
@@ -103,6 +109,24 @@
       function sources(){
           document.getElementById('sourcesBtn').click();
       }
+      function lastFunc(){
+        $('.backBtn').attr('onclick',lastFunc);
+      }
+      $(document).ready(function() {
+  // add a hash to the URL when the user clicks on a tab
+  $('a[data-bs-toggle="tab"]').on('click', function(e) {
+    history.pushState(null, null, $(this).attr('href'));
+  });
+  // navigate to a tab when the history changes
+  window.addEventListener("popstate", function(e) {
+    var activeTab = $('[href=' + location.hash + ']');
+    if (activeTab.length) {
+      activeTab.tab('show');
+    } else {
+      $('.navbar-nav li.nav-item a:first').tab('show');
+    }
+  });
+});
     </script>
   </head>
   <body>
@@ -112,7 +136,7 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="#home">
             <img src="https://timothy-scholl.github.io/portfolio/tim-smile-favicon.png" alt="Welcome Avatar" width="50" height="auto">
           </a>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -147,6 +171,7 @@
   </nav>
     <div class="tab-content m-3">
       <div class="tab-pane fade show active" id="home" role="tabpanel">
+        <!--<button class="btn btn-ts backBtn" onclick="lastFunc()"><i class="fa-solid fa-arrow-left fa-3x p-2"></i></button>-->
         <h1 class="p-2 text-center">Tim Scholl - Educational Designer with a UX Twist</h1>
         <div class="row w-50 mx-auto mt-3">
           <div class="col-lg-8 my-auto" onclick="whoAmI()" role="button">
@@ -176,7 +201,7 @@
         <div class="row w-50 mx-auto">
           <div class="col-lg-8 my-auto" onclick="sources()" role="button">
             <h2>Sources</h2>
-            <p>Where did I get all these cool icons? What am I reading and listening to to keep in touch with what's important in my career?</p>
+            <p>What am I reading and listening to to keep in touch with what's important in my career? And where did I get all these cool icons?</p>
           </div>
           <div class="col-lg my-auto text-center"><i onclick="sources()" role="button" id="sourcesIcon" class="fa-solid fa-bookmark fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn"></i></div>
         </div>
@@ -188,36 +213,42 @@
       <div class="tab-pane fade" id="projects" role="tabpanel">
         <h1 class="p-2 text-center">Projects</h1>
         <div class="row">
-          <div class="col-lg">
-            <div role="button" onclick="ats1665()">
-            <h3 class="text-center">ATS1665 - Understanding Gender 1</h3>
-            <p class="text-center">The highest quality online undergraduate unit you can make</p>
+          <div class="col-lg" role="button" onclick="ats1665()">
+            <h3 class="text-center">ATS1665: Understanding Gender 1</h3>
+            <h5 class="text-center">Make the highest quality online undergraduate unit possible</h5>
             <p class="text-center"><i class="fa-solid fa-venus-mars fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
           </div>
-          </div>
-          <div class="col-lg">
-            <h3 class="text-center">BEEST - <strong>B</strong>ootstrap <strong>E</strong>nhanced <strong>E</strong>lement <strong>S</strong>treamlining <strong>T</strong>ool</h3>
-            <p class="text-center">Simplifying Advanced HTML Element Design</p>
+          <div class="col-lg" role="button" onclick="beest()">
+            <h3 class="text-center">BEEST</h3>
+            <h5 class="text-center">Simplifying advanced HTML element design for Moodle</h5>
+            <p class="text-center"><i class="fa-solid fa-dragon fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
           </div>
         </div>
+        <hr>
         <div class="row">
-          <div class="col-lg">
-            <h3 class="text-center">MD Design - Postgraduate Studies in Medicine</h3>
-            <p class="text-center">Transforming How Future Doctors Study</p>
+          <div class="col-lg" role="button" onclick="mdDesign()">
+            <h3 class="text-center">MD Design</h3>
+            <h5 class="text-center">Transforming how future doctors study</h5>
+            <p class="text-center"><i class="fa-solid fa-user-doctor fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
+          </div>
+          <div class="col-lg" role="button" onclick="musicSubmission()">
+            <h3 class="text-center">Music Performance in the Pandemic</h3>
+            <h5 class="text-center">Automating Google Drive for the good of music</h5>
+            <p class="text-center"><i class="fa-solid fa-music fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
           </div>
         </div>     
       </div>
       <div class="tab-pane fade" id="ats1665" role="tabpanel">
         <h1 class="p-2 text-center">Project - ATS1665 - Understanding Gender 1</h1>
-        <h5 class="text-center">The highest quality online undergraduate unit you can make</h5>
+        <h5 class="text-center">Make the highest quality online undergraduate unit possible</h5>
       </div>
       <div class="tab-pane fade" id="beest" role="tabpanel">
-        <h1 class="p-2 text-center">BEEST - <strong>B</strong>ootstrap <strong>E</strong>nhanced <strong>E</strong>lement <strong>S</strong>treamlining <strong>T</strong>ool</h1>
-        <h5 class="text-center">Simplifying Advanced HTML Element Design</h5>
+        <h1 class="p-2 text-center">BEEST</h1>
+        <h5 class="text-center">Simplifying advanced HTML element design</h5>
       </div>
       <div class="tab-pane fade" id="mdDesign" role="tabpanel">
         <h1 class="p-2 text-center">MD Design - Postgraduate Studies in Medicine</h1>
-          <h5 class="text-center">Transforming How Future Doctors Study</h5>
+          <h5 class="text-center">Transforming how future doctors study</h5>
       </div>
       <div class="tab-pane fade" id="contact" role="tabpanel">
         <h1 class="p-2 text-center">Contact Me</h1>
