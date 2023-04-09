@@ -64,13 +64,12 @@
         }
         i.iconBtnSm:hover {
           color: #008db3 !important;
-
         }
         span#home{
             position: relative;
             top:-6rem;
         }
-        span#whoAmI, span#contact, span#projects, span#ats1665, span#mdDesign, span#beest, span#musicPerf, span#sources { 
+        span#whoAmI, span#contact, span#projects, span#ats1665, span#mdDesign, span#beest, span#musicPerf, span#learningInAction, span#qualityTL, span#sources { 
             position:relative; 
             top:-4.5rem;
         }
@@ -93,27 +92,21 @@
       });
       function whoAmI(){
           document.getElementById('whoAmIBtn').click();
-          
       }
       function home(){
           document.getElementById('homeBtn').click();
-        
       }
       function contact(){
           document.getElementById('contactBtn').click();
-         
       }
       function projects(){
           document.getElementById('projectsBtn').click();
-          
       }
       function ats1665(){
           document.getElementById('ats1665Btn').click();
-         
       }
       function beest(){
           document.getElementById('beestBtn').click();
-          
       }
       function mdDesign(){
           document.getElementById('mdDesignBtn').click();
@@ -121,10 +114,18 @@
       function musicSubmission(){
           document.getElementById('musicPerfBtn').click()
       }
+      function research(){
+          document.getElementById('researchBtn').click();
+      }
+      function qualityTL(){
+          document.getElementById('qualityTLBtn').click()
+      }
+      function learningInAction(){
+          document.getElementById('learningInActionBtn').click()
+      }
       function sources(){
           document.getElementById('sourcesBtn').click();
       }
-      
     </script>
   </head>
   <body>
@@ -142,14 +143,11 @@
             <li class="nav-item" role="presentation">
                 <a id="homeBtn" class="nav-link active" href="#home">Home</a>
             </li>
-            <li class="nav-item d-none" role="presentation">
-              <a id="projectsBtn" class="nav-link" href="#projects">Projects</a>
-          </li>
             <li class="nav-item" role="presentation">
               <a id="whoAmIBtn" class="nav-link" href="#whoAmI">Who Am I?</a>
           </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Projects</a>
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#projectsBtn" onclick="projects()" role="button" aria-expanded="false">Projects</a>
                 <ul class="dropdown-menu">
                     <li><a id="ats1665Btn" class="dropdown-item" href="#ats1665">ATS1665 - Understanding Gender 1</a></li>
                     <li><a id="beestBtn" class="dropdown-item" href="#beest">BEEST Design Support</a></li>
@@ -157,6 +155,14 @@
                     <li><a id="musicPerfBtn" class="dropdown-item" href="#musicPerf">Music Performance in the Pandemic</a></li>
                 </ul>
             </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="researchBtn" onclick="research()" href="#research" role="button" aria-expanded="false">Research</a>
+              <ul class="dropdown-menu">
+                  <li><a id="qualityTLBtn" class="dropdown-item" href="#qualityTL">Balancing Quality in Teaching and Research</a></li>
+                  <li><a id="learningInActionBtn" class="dropdown-item" href="#learningInAction">Experience and Reflection: Learning in Action</a></li>
+              </ul>
+          </li>
+            
             <li class="nav-item" role="presentation">
                 <a id="contactBtn" class="nav-link" href="#contact">Contact</a>
             </li>
@@ -174,7 +180,7 @@
         <!--<button class="btn btn-ts backBtn" onclick="lastFunc()"><i class="fa-solid fa-arrow-left fa-3x p-2"></i></button>-->
         <h1 class="p-2 text-center">Tim Scholl - Educational Designer with a UX Twist</h1>
         <div class="row w-50 mx-auto mt-3">
-          <div class="col-lg-8 my-auto" onclick="whoAmI()" role="button">
+          <div class="col-lg-8 my-auto mx-auto" onclick="whoAmI()" role="button">
             <h3 class="text-center">Who Am I?</h3>
             <p class="text-center">Who am I? What is my story? What led me to being involved in educational design? This section is where I do my best to answer all these questions and tell you how I got to where I am now.</p>
           </div>
@@ -183,7 +189,7 @@
         </div>
         <hr class="w-50 mx-auto border border-ts opacity-50">
         <div class="row w-50 mx-auto">
-          <div class="col-lg-8 my-auto" onclick="projects()" role="button">
+          <div class="col-lg-8 my-auto  mx-auto" onclick="projects()" role="button">
             <h3 class="text-center">Projects</h3>
             <p class="text-center">Everything I've created or am creating to do with Blended and Online Learning that I'm able to present is here. I try to keep everything as transparent and accessible as possible.</p>
         </div>
@@ -191,7 +197,15 @@
         </div>
         <hr class="w-50 mx-auto border border-ts opacity-50">
         <div class="row w-50 mx-auto">
-          <div class="col-lg-8 my-auto" onclick="contact()" role="button">
+          <div class="col-lg-8 my-auto  mx-auto" onclick="research()" role="button">
+            <h3 class="text-center">Research</h3>
+            <p class="text-center">Read the research I completed during my masters. While it was a digital learning specialisation, I also looked into how to influence the system of teaching and learning in Higher Education.</p>
+        </div>
+          <div class="col-lg my-auto text-center"><i onclick="research()" role="button" id="researchIcon" class="fa-solid fa-user-graduate fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn"></i></div>
+        </div>
+        <hr class="w-50 mx-auto border border-ts opacity-50">
+        <div class="row w-50 mx-auto">
+          <div class="col-lg-8 my-auto  mx-auto" onclick="contact()" role="button">
             <h3 class="text-center">Contact Me</h3>
             <p class="text-center">Want to get in touch and talk design, education or feedback about my projects? Here's everywhere you can get in touch with me however you like to connect with new people.</p>
           </div>
@@ -199,7 +213,7 @@
         </div>
         <hr class="w-50 mx-auto border border-ts opacity-50">
         <div class="row w-50 mx-auto">
-          <div class="col-lg-8 my-auto" onclick="sources()" role="button">
+          <div class="col-lg-8 my-auto  mx-auto" onclick="sources()" role="button">
             <h3 class="text-center">Sources</h3>
             <p class="text-center">What am I reading and listening to to keep in touch with what's important in my career? And where did I get all these cool icons?</p>
           </div>
@@ -211,18 +225,32 @@
       <div>
         <h1 class="p-2 text-center">Who Am I?</h1>
         <h3 class="text-center">A teaching and learning fanatic with a flair for UX design</h3>
-        <h4>What do I stand for?</h4>
-        <p>As a learner I believe all learning should be accessible, flexible and interactive. As a teacher, I believe my role is to push my learners beyond their comfort zone, reflect effectively, and practice their knowledge with passion. As a UX designer, I believe all experiences digitally and face to face should be accessible, fair, enjoyable and make you want to come back for more.</p>
-        <h4>What is my work ethic like?</h4>
-        <p>I do not do things by halves. As you will learn from the examples I present in my portfolio, working with me means always striving for more for yourself, and for the project we are working on. If you are one of those people that says <strong>that's not in my job description, we are not going to work well together</strong>. If you are full of valuable ideas for a project, and want to plan and execute them no matter what it takes to get them over the line, I'm there for it.</p>
-        <h4>What do I do to stay sane?</h4>
-        <p>My first passion and my first degree was music performance. I am a guitarist first and foremost, but can hold a tune, play a bit of piano, and drums and pretty much any instrument I can put my hands on. I play basketball on a Sunday night at Coomera, and watch games in the American basketball league (NBA) daily. When I need to wind down I play a bit of PlayStation. I love playing Assassin's Creed and NBA, and when I really feel like indulging my inner child I jump on Fortnite for a few rounds.</p>
-        <h4>What's my story?</h4>
-        <p>I started as a Learning Support (LS) Teacher in Metropolitan South Institute of TAFE in Brisbane, QLD. I was a mathematics support teacher for tradespeople - electricians, plumbers and engineers. Lucky I have a natural knack for maths! From here I was offered a spot designing and delivering programs for adult learners in work preparation skills, and refugees preparing to enter Australia as citizens. After a year of doing this work, in 2012 I moved to Melbourne where I continued my work as an LS Teacher and Music Teacher at North Melbourne Institute of TAFE. During this entire time, in the background I was refining my skills in Learning Design, building online and blended activities for adult learners in many music courses and work preparation courses.</p>
-        <p>After 2 years of working with NMIT/Melbourne Polytechnic I started a new role at Box Hill Institute (BHI) as the Academic Advisor for international students. This is where I started to notice gaps in online resources at BHI for both domestic and international students. In particular how to research and reference effectively, and construct argumentative writing.</p>
-        <p>I worked with BHI for 4 years, and converted my role to full time, ongoing, permanent...only to leave 2 months later and take a casual opportunity at Monash University with the Faculty of Arts. I was incredibly excited to get a shot at the highest level of education available in the country with such a reputable institution, working in all the fields I love - Music, Theatre, Languages, Social Sciences and all the Arts Faculty has to offer. After 3 months I then gained a permanent, full-time, ongoing role with the Faculty of Arts, and continued to work as an Educational Designer for 3 years at Monash...enter...the pandemic.</p>
-        <p>I was lucky enough to have a son late in in 2019 and when the pandemic hit, my partner and I decided to return to QLD, not knowing when it would all end, and wanting to share our son with our extended family because he's a legend. I interviewed for 3 different positions at UQ, and it was Sam McKenzie - formerly the Project Manager for the eAssesment project - and Jacqui Lynagh, the current eAssessment Project Manager that saw my experience with upskilling teaching staff in the most difficult situation as a major asset to their team. I worked with eAssessment improving assessment in a number of courses using Inspera, and starting the design of staff professional development for improving assessment through using Inspera for just over a year before the Digital Learning Uplift (DLU) team had an opening and I took the opportunity to get back to full course design. Through working with the Medicine Faculty while being in the DLU I was offered a direct appointment as a full time learning designer and took it, because how often does an Arts major get a shot at working in Medicine or STEM?</p>
-        <p>Now surpassing 10 years of experience as a teacher and learning designer since I first started in QLD at MSIT, I am looking to continue my work in the field, lead newcomers wherever possible and look for my first senior position in the field.</p>
+        <div class="row">
+          <div class="col-lg">
+            <h4>What do I stand for?</h4>
+            <p>As a learner I believe all learning should be accessible, flexible and interactive. As a teacher, I believe my role is to push my learners beyond their comfort zone, reflect effectively, and practice their knowledge with passion. As a UX designer, I believe all experiences digitally and face to face should be accessible, fair, enjoyable and make you want to come back for more.</p>
+            <h4>What is my work ethic like?</h4>
+            <p>I do not do things by halves. As you will learn from the examples I present in my portfolio, working with me means always striving for more for yourself, and for the project we are working on. If you are one of those people that says <strong>that's not in my job description, we are not going to work well together</strong>. If you are full of valuable ideas for a project, and want to plan and execute them no matter what it takes to get them over the line, I'm there for it.</p>
+            <h4>What do I do to stay sane?</h4>
+            <p>My first passion and my first degree was music performance. I am a guitarist first and foremost, but can hold a tune, play a bit of piano, and drums and pretty much any instrument I can put my hands on. I play basketball on a Sunday night at Coomera, and watch games in the American basketball league (NBA) daily. When I need to wind down I play a bit of PlayStation. I love playing Assassin's Creed and NBA, and when I really feel like indulging my inner child I jump on Fortnite for a few rounds.</p>
+          </div>
+          <div class="col-3 my-auto mx-auto">
+            <img src="img/TimSchollProfilePic.jpeg" alt="Tim Scholl Profile Pic" class="img-fluid" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg">
+            <h4>What's my story?</h4>
+            <p>I started as a Learning Support (LS) Teacher in Metropolitan South Institute of TAFE in Brisbane, QLD. I was a mathematics support teacher for tradespeople - electricians, plumbers and engineers. Lucky I have a natural knack for maths! From here I was offered a spot designing and delivering programs for adult learners in work preparation skills, and refugees preparing to enter Australia as citizens. After a year of doing this work, in 2012 I moved to Melbourne where I continued my work as an LS Teacher and Music Teacher at North Melbourne Institute of TAFE. During this entire time, in the background I was refining my skills in Learning Design, building online and blended activities for adult learners in many music courses and work preparation courses.</p>
+            <p>After 2 years of working with NMIT/Melbourne Polytechnic I started a new role at Box Hill Institute (BHI) as the Academic Advisor for international students. This is where I started to notice gaps in online resources at BHI for both domestic and international students. In particular how to research and reference effectively, and construct argumentative writing.</p>
+            <p>I worked with BHI for 4 years, and converted my role to full time, ongoing, permanent...only to leave 2 months later and take a casual opportunity at Monash University with the Faculty of Arts. I was incredibly excited to get a shot at the highest level of education available in the country with such a reputable institution, working in all the fields I love - Music, Theatre, Languages, Social Sciences and all the Arts Faculty has to offer. After 3 months I then gained a permanent, full-time, ongoing role with the Faculty of Arts, and continued to work as an Educational Designer for 3 years at Monash...enter...the pandemic.</p>
+            <p>I was lucky enough to have a son late in in 2019 and when the pandemic hit, my partner and I decided to return to QLD, not knowing when it would all end, and wanting to share our son with our extended family because he's a legend. I interviewed for 3 different positions at UQ, and it was Sam McKenzie - formerly the Project Manager for the eAssesment project - and Jacqui Lynagh, the current eAssessment Project Manager that saw my experience with upskilling teaching staff in the most difficult situation as a major asset to their team. I worked with eAssessment improving assessment in a number of courses using Inspera, and starting the design of staff professional development for improving assessment through using Inspera for just over a year before the Digital Learning Uplift (DLU) team had an opening and I took the opportunity to get back to full course design. Through working with the Medicine Faculty while being in the DLU I was offered a direct appointment as a full time learning designer and took it, because how often does an Arts major get a shot at working in Medicine or STEM?</p>
+            <p>Now surpassing 10 years of experience as a teacher and learning designer since I first started in QLD at MSIT, I am looking to continue my work in the field, lead newcomers wherever possible and look for my first senior position in the field.</p>
+          </div>
+          <div class="col-3 my-auto mx-auto">
+            <img src="img/TimSchollGtr-1.jpeg" alt="Tim Scholl on Guitar" class="img-fluid" />
+          </div>
+        </div>
       </div>
       <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
       <div><span id="projects"></span></div>
@@ -231,12 +259,12 @@
         <div class="row">
           <div class="col-lg" role="button" onclick="ats1665()">
             <h3 class="text-center">ATS1665: Understanding Gender 1</h3>
-            <h5 class="text-center">Make the highest quality online undergraduate unit possible</h5>
+            <h6 class="text-center">Make the highest quality online undergraduate unit possible</h6>
             <p class="text-center"><i class="fa-solid fa-venus-mars fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
           </div>
           <div class="col-lg" role="button" onclick="beest()">
             <h3 class="text-center">BEEST</h3>
-            <h5 class="text-center">Simplifying advanced HTML element design for Moodle</h5>
+            <h6 class="text-center">Simplifying advanced HTML element design for Moodle</h6>
             <p class="text-center"><i class="fa-solid fa-dragon fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
           </div>
         </div>
@@ -244,20 +272,20 @@
         <div class="row">
           <div class="col-lg" role="button" onclick="mdDesign()">
             <h3 class="text-center">MD Design</h3>
-            <h5 class="text-center">Transforming how future doctors study</h5>
+            <h6 class="text-center">Transforming how future doctors study</h6>
             <p class="text-center"><i class="fa-solid fa-user-doctor fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
           </div>
           <div class="col-lg" role="button" onclick="musicSubmission()">
             <h3 class="text-center">Music Performance in the Pandemic</h3>
-            <h5 class="text-center">Automating Google Drive for the good of music</h5>
+            <h6 class="text-center">Automating Google Drive for the good of music</h6>
             <p class="text-center"><i class="fa-solid fa-music fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
           </div>
         </div>     
-      </div>
-      <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
+      </div>  
+    <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
       <div><span id="ats1665"></span></div>
       <div>
-        <h1 class="p-2 text-center">Project - ATS1665 - Understanding Gender 1</h1>
+        <h1 class="p-2 text-center">Project: ATS1665 - Understanding Gender 1</h1>
         <h3 class="text-center">Make the highest quality online undergraduate unit possible</h3>
         <h4>What was the aim of this project?</h4>
         <p>This unit was a first of its kind in the Faculty of Arts. The academic Frankie Egan, coordinating a unit for the first time, and I were given the challenge to <strong>design the ideal online learning unit that will set the example for a new generation of online offerings</strong> as a directive from the ASsociate Dean of Arts. This was in response to the lockdowns at the start of the pandemic where many students were forced to miss out on units that required face to face teaching; this unit would be one of the many alternatives offered in Arts.</p>
@@ -289,13 +317,13 @@
         <div class="row w-75 mx-auto">
           <div class="col-lg text-center">
             <a class="text-decoration-none text-ts" href="https://drive.google.com/file/d/10_aYF8KYOpavbtMsQXFrDjHe58TR7g6B/view?usp=share_link" target="_blank" title="ATS1665 Quantitative Results"><figure><i class="fa-solid fa-ranking-star fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i>
-              <figcaption class="mt-2">ATS1665 Quantitative Results</figcaption>
+              <figcaption class="mt-2"><h6>ATS1665 Quantitative Results</h6></figcaption>
               </figure></a>
           </div>
           <div class="col-lg text-center">
             <a class="text-decoration-none text-ts" href="https://drive.google.com/file/d/12XkDCLvF7MS-xLT2MeQenbQnKfcAN3Zr/view?usp=share_link" target="_blank" title="ATS1665 Qualitative Results">
             <figure><i class="fa-solid fa-people-arrows fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i>
-            <figcaption class="mt-2">ATS1665 Qualitative Results</figcaption>
+            <figcaption class="mt-2"><h6>ATS1665 Qualitative Results</h6></figcaption>
             </figure></a>
           </div>
         </div>
@@ -303,7 +331,7 @@
       <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
       <div><span id="beest"></span></div>
       <div>
-        <h1 class="p-2 text-center">BEEST</h1>
+        <h1 class="p-2 text-center">Project: BEEST</h1>
         <h3 class="text-center">Simplifying advanced HTML element design</h3>
         <h4>What is the BEEST?</h4>
         <p>BEEST stands for Bootstrap Enhanced Elements Streamlining Tool. BEEST takes your input and combines it with pre-written HTML to generate advanced HTML elements for Moodle without the need for complex HTML skills. <a href="https://beest.monash.edu" target="_blank" title="Monash BEEST">Take a look at the current state of the project here</a>.</p>
@@ -333,8 +361,8 @@
       <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
       <div><span id="mdDesign"></span></div>
       <div>
-        <h1 class="p-2 text-center">MD Design - Postgraduate Studies in Medicine</h1>
-          <h5 class="text-center">Transforming how future doctors study</h5>
+        <h1 class="p-2 text-center">Project: MD Design - Postgraduate Studies in Medicine</h1>
+          <h3 class="text-center">Transforming how future doctors study</h3>
           <h4>What is this project?</h4>
           <p>UQ's Medicine Faculty is redesigning its postgraduate medicine course to be 4 year-long courses, rather than 32 individual courses. This means we are combining the themes, content and assessment of 8 x 12 week courses into 1 x 32-week course. This redesign has been prompted by doctors in the field and current students raising concerns that the areas of learning are not integrated well enough. Students are out practicing using compartmentalised knowledge, rather than applying their skills holistically to each given situation. In an attempt to rectify this, the entire program has been reduced to its fundamentals for year one and put back together again.</p>
           <h4>Who are the stakeholders?</h4>
@@ -368,7 +396,7 @@
       <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
       <div><span id="musicPerf"></span></div>
       <div>
-        <h1 class="p-2 text-center">Music Performance in the Pandemic</h1>
+        <h1 class="p-2 text-center">Project: Music Performance in the Pandemic</h1>
         <h3 class="text-center">Automating Google Drive for the good of music</h3>
         <h4>What was the aim of this project?</h4>
         <p>When all students and staff were sent home from Monash, music and performance students and staff faced a unique issue. So many of the courses relied on assessment of a live performance component. With the inability to be in the same space how would musicians form and perform in a band for their assessment? Even if they could, how would they submit? How would that submission be disseminated to relative markers? Enter myself as an Educational Designer in Arts working with the Music Faculty and Matt Chen, an Educational Designer from IT. Between us we used Google Suite and Apps Scripts to automate a huge amount of online work for music and drama assessment during Semester 1 of 2021, which prevented a complete shut down of the courses at the time.</p>
@@ -408,31 +436,84 @@
         <p>Staff were overwhelmed with what Matt and I were able to achieve using the Google Suite. That two people could automate the work that should have had a team dedicated to it was something of a miracle, the right people with the right attitude and skillset in the right place at the right time. We minimised revenue loss, job losses and time lost and created a process that was essentially reduced to clicking a few buttons at the right time to produce automations for the cohort. A win I am incredibly proud of being a music student and musician myself.</p>
       </div>
       <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
-      <div><span id="contact"></span></div>
+      <div><span id="research"></span></div>
       <div>
+        <h1 class="p-2 text-center">Research</h1>
+        <div class="row">
+          <div class="col-lg" role="button" onclick="qualityTL()">
+            <h3 class="text-center">Balancing Quality in Teaching and Research</h3>
+            <h6 class="text-center">A systematic approach to improving teaching and learning in higher education</h6>
+            <p class="text-center"><i class="fa-solid fa-scale-balanced fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
+          </div>
+          <div class="col-lg" role="button" onclick="learningInAction()">
+            <h3 class="text-center">Experience and Reflection: Learning in Action</h3>
+            <h6 class="text-center">Comparing modern models of learning for the betterment of international students</h6>
+            <p class="text-center"><i class="fa-solid fa-bolt fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
+          </div>
+        </div>
+      </div> 
+      <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
+      <div><span id="qualityTL"></span></div>
+      <div>
+        <h1 class="p-2 text-center">Research: Building a Quality Balance in Teaching and Research</h1>
+        <h3 class="text-center">A systematic approach to improving teaching and learning in higher education</h3>
+        <div class="row">
+          <div class="col-lg">
+            <h4>Synopsis</h4>
+            <p>This paper explores the history of higher education (HE) and what has led to the current tense state, where instead of a balanced approach to managing and implementing quality teaching and research, there is pressure either directly or indirectly to favour research by HE providers. My approach was not to simply say that higher education needs to implement teaching heavy positions. Instead, it was to dive deeper into what makes research worthy of such favour, and how higher education in Australia can implement a similar path to balance value for teaching. The main discovery was systems that are in place to measure research, and rank universities based on their research are a priority of the universities themselves. If a rigorous system of reviewing and ranking teaching and learning quality could be created and put in place, we would see external ranking systems by independent bodies rank universities on teaching and learning quality as well as research quality. The main limitations of this study were the unclear nature of financial reports in relation to funding and expenditure on teaching and learning, and an absence of literature on higher education institutions implementing processes for measuring teaching and learning quality. Download the full paper by clicking the icon.</p>
+          </div>
+          <div class="col-lg-3 my-auto">
+            <a class="text-decoration-none" role="button" href="https://drive.google.com/file/d/1921yQDK0C5D0jhsiRLEBffwUpIPAZDB3/view?usp=sharing" target="_blank" title="Timothy Scholl - Building a Quality Balance in Teaching and Research full paper">
+              <p class="text-center"><i class="fa-solid fa-scale-balanced fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
+              <h6 class="text-center text-ts">Download the full paper</h6>
+            </a>
+            </div>
+          </div>
+        </div>
+      <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
+      <div><span id="learningInAction"></span></div>
+      <div>
+        <h1 class="p-2 text-center">Research: Experience and Reflection: Learning in Action</h1>
+        <h3 class="text-center">A systematic approach to improving teaching and learning in higher education</h3>
+        <div class="row">
+          <div class="col-lg">
+            <h4>Synopsis</h4>
+            <p>Exploring Experiential Learning (EL) and Community Service Learning (CSL) further to improve my own practice as an educator was the focus of this paper. While experiential learning is becoming more prevalent in its many forms such as Problem/Project Based Learning (PBL) and Social Justice Learning (SJL) I wanted to further understand how the theories that underpin these practices could possibly be applied to the international student experience in Australia. My findings were as follows. To implement a mentoring program and language exchange in the institution I was employed at would help solve two major issues; language acquisition and development, and exploitation of students in unfamiliar work and study conditions. All too familiar are stories of international students working 50+ hours a week, cash in hand, while studying full time, 20+ hours per week, to support themselves.</p>
+            <p>Mentors who have been in the country for 2+ years could provide new students incredible insight into navigating Australia's system to ensure fairness and safety while in the country. Secondly, language acquisition, while encouraged in the student's home country to achieve a high enough level of confidence with language to attain a position in an Australian institution, tends to come to a halt once enrolled in study due to many competing factors for a student's time and also cultural differences. A language exchange would see local and international students share language knowledge, build relationships and counter the stagnation of language acquisition while also familiarising participants with unfamiliar cultural expectations and norms. Download the full paper by clicking the icon.</p>
+          </div>
+          <div class="col-lg-3 my-auto">
+            <a class="text-decoration-none" role="button" href="https://drive.google.com/open?id=1zw1XKvKWwP8Lm__r7WKzhxdoyRuzN2Hm" target="_blank" title="Timothy Scholl - Experiential Learning and Community Service Learning Compared">
+              <p class="text-center"><i class="fa-solid fa-bolt fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
+              <h6 class="text-center text-ts">Download the full paper</h6>
+            </a>
+            </div>
+          </div>
+      </div>
+      <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
+      <div><span id="contact"></span></div>
         <h1 class="p-2 text-center">Contact Me</h1>
-        <h5 class="text-center">Get in touch</h5>
+        <h3 class="text-center">Get in touch</h3>
         <div class="row w-50 mx-auto mt-3">
-        <p class="text-center"><a href="https://www.linkedin.com/in/tim-scholl/" target="_blank" title="Tim Scholl - LinkedIn"><i class="fa-brands fa-linkedin text-ts iconBtnSm"></i></a> - LinkedIn - <a href="https://www.linkedin.com/in/tim-scholl/" target="_blank" title="Tim Scholl - LinkedIn">My LinkedIn Profile</a></p>
-        <p class="text-center"><i class="fa-solid fa-inbox text-ts iconBtnSm"></i> - Email - <span class="emailToCopy">t.scholl87@gmail.com</span> <span class="badge text-bg-ts copyBadge align-top" role="button">Click to copy email address</span></p>
+        <p class="text-center"><a href="https://www.linkedin.com/in/tim-scholl/" target="_blank" title="Tim Scholl - LinkedIn"><i class="fa-brands fa-linkedin text-ts iconBtnSm"></i></a> LinkedIn - <a href="https://www.linkedin.com/in/tim-scholl/" target="_blank" title="Tim Scholl - LinkedIn">My LinkedIn Profile</a></p>
+        <p class="text-center"><i class="fa-solid fa-inbox text-ts iconBtnSm"></i> Email - <span class="emailToCopy">t.scholl87@gmail.com</span> <span class="badge text-bg-ts copyBadge align-top" role="button">Click to copy email address</span></p>
       </div>    
       <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
       <div><span id="sources"></span></div>
       <div>
         <h1 class="p-2 text-center">Sources</h1>
-        <h5 class="text-center">What I read and listen to</h5>
+        <h3 class="text-center">What I read and listen to</h3>
         <div class="row row-cols-1 row-cols-md-3 g-3">
             <div class="col">
                 <div class="card h-100">
                     <img class="img-fluid card-img-top" src="img\Nielsen_Norman_Group_logo_2022.png" alt="Nielson Norman Group Logo" />
                     <div class="card-body">
-                        <h3 class="card-title">Nielson Norman Group</h3>
-                        <h5><i class="fa-solid fa-laptop text-ts"></i> Website - NN Group</h5>
+                        <h3 class="card-title text-center mt-3">Nielson Norman Group</h3>
+                        <h5 class="text-center"><i class="fa-solid fa-laptop text-ts"></i> Website - NN Group</h5>
                         <p class="card-text">Globally renowned UX experts. With articles for beginners in UX through to more advanced and complex concepts, NN/Group is the first place I go to for answers.</p>
-                        <p><a href="https://www.nngroup.com/" target="_blank" title="Nielson Norman Group Website">Nielson Norman Group Website</a></p>
-                        <h5><i class="fa-solid fa-podcast text-ts"></i> Podcast - NN Group</h5>
+                        <p class="text-center"><a href="https://www.nngroup.com/" target="_blank" title="Nielson Norman Group Website">Nielson Norman Group Website</a></p>
+                        <h5 class="text-center"><i class="fa-solid fa-podcast text-ts"></i> Podcast - NN Group</h5>
                         <p class="card-text">On top of offering top class research, the group provides a podcast with interviews from experts in the field that do the hard yards and walk the talk. Click below to go to their podcast page and find the link for your preferred podcast platform.</p>
-                        <p><a href="https://podcasters.spotify.com/pod/show/nngroup" target="_blank" title="NN Group Podcast">NN Group Podcast page</a></p>
+                        <p class="text-center"><a href="https://podcasters.spotify.com/pod/show/nngroup" target="_blank" title="NN Group Podcast">NN Group Podcast page</a></p>
                     </div>
                 </div>
             </div>
@@ -440,13 +521,13 @@
                 <div class="card h-100">
                     <img class="img-fluid card-img-top" src="img\DiaryofaCEO.jpg" alt="Diary of a CEO logo"/>
                     <div class="card-body">
-                        <h3 class="card-title">Steven Bartlett</h3>
-                        <h5><i class="fa-solid fa-laptop text-ts"></i> Website - Steven Bartlett</h5>
+                        <h3 class="card-title text-center">Steven Bartlett</h3>
+                        <h5 class="text-center"><i class="fa-solid fa-laptop text-ts"></i> Website - Steven Bartlett</h5>
                         <p class="card-text">Steven Bartlett's is a well known digital marketing entrepeneur. Following his ventures and product releases are a great lesson in UX and product design.</p>
-                        <p><a href="https://stevenbartlett.com/" target="_blank" title="Steven Bartlett's Website">Steven Bartlett's Website</a></p>
-                        <h5><i class="fa-solid fa-podcast text-ts"></i> Podcast - Diary of a CEO</h5>
+                        <p class="text-center"><a href="https://stevenbartlett.com/" target="_blank" title="Steven Bartlett's Website">Steven Bartlett's Website</a></p>
+                        <h5 class="text-center"><i class="fa-solid fa-podcast text-ts"></i> Podcast - Diary of a CEO</h5>
                         <p>In amongst many other ventures, he now leads one of the most consistently popular pod/vodcasts; Diary of a CEO. Interviewing experts in multiple fields focusing on health and wellbeing. My personal favourites have been Simon Sinek, Johann Hari, Julian Treasure and Dr. Tali Sharot.</p>
-                        <p><a href="https://stevenbartlett.com/the-diary-of-a-ceo-podcast/" target="_blank" title="Diary of a CEO Podcast">Diary of a CEO Podcast page</a></p>
+                        <p class="text-center"><a href="https://stevenbartlett.com/the-diary-of-a-ceo-podcast/" target="_blank" title="Diary of a CEO Podcast">Diary of a CEO Podcast page</a></p>
                     </div>
                 </div>
             </div>
@@ -454,16 +535,32 @@
                 <div class="card h-100">
                     <img class="img-fluid card-img-top" src="img\feedback for learning.jpg" alt="Feedback for the journey"/>
                     <div class="card-body">
-                        <h3 class="card-title">Michael Henderson</h3>
-                        <h5><i class="fa-solid fa-laptop text-ts"></i> Website - Feedback for learning</h5>
+                        <h3 class="card-title text-center">Michael Henderson</h3>
+                        <h5 class="text-center"><i class="fa-solid fa-laptop text-ts"></i> Website - Feedback for learning</h5>
                         <p class="card-text">Michael Henderson and Michael Phillips are modern educational researchers at Monash that I studied with. I find their attitude inspiring. To never stop wanting to reflect and learn.</p>
-                        <p><a href="https://feedbackforlearning.org/" target="_blank" title="Feedback for learning">Feedback for learning website</a></p>
-                        <h5><i class="fa-solid fa-podcast text-ts"></i> Podcast - Meet the Education Researcher</h5>
+                        <p class="text-center"><a href="https://feedbackforlearning.org/" target="_blank" title="Feedback for learning">Feedback for learning website</a></p>
+                        <h5 class="text-center"><i class="fa-solid fa-podcast text-ts"></i> Podcast - Meet the Education Researcher</h5>
                         <p>This podcast is produced by Neil Selwyn, who works alongside Michael Henderson. While not directly related to the project, this podcast shares many of the same views and attitudes. Asking difficult questions, engaging people who are open to change. Short, sharp, and well worth a listen.</p>
-                        <p><a href="https://podcasts.apple.com/au/podcast/meet-the-education-researcher/id1230763892" target="_blank" title="Meet the Education Researcher podcast page">Meet the Education Researcher Podcast page</a></p>
+                        <p class="text-center"><a href="https://podcasts.apple.com/au/podcast/meet-the-education-researcher/id1230763892" target="_blank" title="Meet the Education Researcher podcast page">Meet the Education Researcher Podcast page</a></p>
                     </div>
                 </div>
             </div>
+        </div>
+        <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
+        <h3 class="text-center">What did I use to build this site?</h3>
+        <div class="row">
+          <div class="col-lg">
+            <h4 class="text-center"><i class="fa-brands fa-github"></i> Github</h4>
+            <p>Github is an online development hub. It also has a public pages space so you can build web pages - like this one - and applications - like BEEST and the Code Centre - all for free. The only catch with the free version is everyone gets to see your code, but that's what github is all about. Collaborating and innovating. Taking what other people have built and making it work to solve a problem.</p>
+          </div>
+          <div class="col-lg">
+            <h4 class="text-center"><i class="fa-brands fa-bootstrap"></i> Bootstrap</h4>
+            <p>Bootstrap is the most referenced design library on the internet. I have used it to style and format this site, the BEEST, the Code Centre and many other projects to improve user experience, look and feel of online products. Without Bootstrap this would all be a bunch of plain text on a page. Boring!</p>
+          </div>
+          <div class="col-lg">
+            <h4 class="text-center"><i class="fa-solid fa-font-awesome"></i> Font Awesome</h4>
+            <p>Font Awesome is the most highly used icon library on the internet. It was one of the first to be created, and has stood the text of time to get to version 6. <strong>Fun fact</strong>: it is the reason why so many icon libraries use the <code>&lt;i&gt;</code> element to display icons and why this element is no longer the standard for italics - instead we use the <code>&lt;em&gt;</code> element. The free version gives you access to just over 2000 icons. The full version has just over 20000 icons. It can take a good project and make it great.</p>
+          </div>
         </div>
       </div>
     </div>
