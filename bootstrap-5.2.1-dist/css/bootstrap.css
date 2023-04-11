@@ -4510,7 +4510,7 @@ background: #008db3;
 }
 
 .accordion-header {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .accordion-item {
