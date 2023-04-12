@@ -69,7 +69,7 @@
             position: relative;
             top:-6rem;
         }
-        span#whoAmI, span#contact, span#projects, span#ats1665, span#mdDesign, span#beest, span#musicPerf, span#learningInAction, span#qualityTL, span#sources { 
+        span#whoAmI, span#contact, span#projects, span#ats1665, span#mdDesign, span#beest, span#musicPerf, span#research, span#learningInAction, span#qualityTL, span#sources { 
             position:relative; 
             top:-4.5rem;
         }
@@ -100,7 +100,7 @@
           document.getElementById('contactBtn').click();
       }
       function projects(){
-          document.getElementById('projectsBtn').click();
+          document.getElementById('projects').scrollIntoView();;
       }
       function ats1665(){
           document.getElementById('ats1665Btn').click();
@@ -114,8 +114,8 @@
       function musicSubmission(){
           document.getElementById('musicPerfBtn').click()
       }
-      function research(){
-          document.getElementById('researchBtn').click();
+      function research(){ 
+          document.getElementById('research').scrollIntoView();
       }
       function qualityTL(){
           document.getElementById('qualityTLBtn').click()
@@ -195,7 +195,7 @@
         </div>
         <hr class="w-50 mx-auto border border-ts opacity-50">
         <div class="row w-50 mx-auto">
-          <div class="col-lg-8 my-auto  mx-auto" onclick="research()" role="button">
+          <div class="col-lg-8 my-auto mx-auto" onclick="research()" role="button">
             <h3 class="text-center">Research</h3>
             <p class="text-center">Read the research I completed during my masters. While it was a digital learning specialisation, I also looked into how to influence the system of teaching and learning in Higher Education.</p>
         </div>
