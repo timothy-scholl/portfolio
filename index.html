@@ -65,6 +65,9 @@
         i.iconBtnSm:hover {
           color: #008db3 !important;
         }
+        a#bttBtn:hover {
+          background: #008db3 !important;
+        }
         span#home{
             position: relative;
             top:-6rem;
@@ -886,6 +889,7 @@
     <span class="navbar-text text-white">Made with <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/" target="_blank" title="Get Bootstrap">Bootstrap v5.2</a>, <a href="https://fontawesome.com/search?o=r&m=free" target="_blank" title="Font Awesome v6 Free Icon Search">FontAwesome v6.1</a> by Tim Scholl. Last updated 15th March, 2023.</span>
   </div>
 </nav>
+<a class="text-bg-ts p-2" data-bs-toggle="tooltip" data-bs-title="Back to top" data-bs-placement="top" role="button" id="bttBtn" style="position: fixed; bottom: 70px; right:50px; display: none;" onclick="javascript:window.scrollTo(0, 0);"><i class="fa-solid fa-arrow-up fa-2x"></i></a>
 <script type="text/javascript">
 var $temp = $('<input>');
 $('.copyBadge').on('click', function (){
@@ -901,6 +905,19 @@ $('.copyBadge').on('click', function (){
     $copyBadge.html($copyBadgeHTML);
   }, 2000);
 });
+ // Get the button
+ let bttBtn = document.getElementById("bttBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function(){scrollFunction()};
+    
+    function scrollFunction(){
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        bttBtn.style.display = "block";
+      } else {
+        bttBtn.style.display = "none";
+      }
+    }
 </script>
 </body>
 </html>
