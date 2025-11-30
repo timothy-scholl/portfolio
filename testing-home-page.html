@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Tim Scholl Portfolio</title>
     <link rel="icon" href="https://timothy-scholl.github.io/portfolio/tim-smile-favicon.png" type="image/gif" />
        
@@ -76,18 +77,15 @@
             position:relative; 
             top:-4.5rem;
         }
+        .my-6 { 
+          margin-top: 6rem; 
+          margin-bottom: 6rem; 
+        }
+        .list-lower-alpha {
+          list-style-type: lower-alpha;
+          margin-left: 1.25rem; /* adjust if needed */
+        }
     </style>
-    <!--Dropdowns in the nav open on hover
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(".dropdown").hover(function () {
-                var dropdownMenu = $(this).children(".dropdown-menu");
-                if (dropdownMenu.is(":visible")) {
-                    dropdownMenu.parent().toggleClass("show");
-                    dropdownMenu.css('z-index','1030');
-                }
-            });
-        });  -->
         <script type="text/javascript"> 
         window.addEventListener('load',function(){  
        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
@@ -174,18 +172,17 @@
       </div>
     </div>
   </nav>
-  <div style="margin: 6rem 0;"></div>
+  <div class="my-6"></div>
     <div id="content" class="container">
         <div><span id="home"></span></div>
       <div>
-        <!--<button class="btn btn-ts backBtn" onclick="lastFunc()"><i class="fa-solid fa-arrow-left fa-3x p-2"></i></button>-->
         <h1 class="p-2 text-center">Tim Scholl - Educational Designer and Capability Partner with a UX Twist</h1>
         <div class="row w-50 mx-auto mt-3">
           <div class="col-lg-8 my-auto mx-auto" onclick="whoAmI()" role="button">
             <h3 class="text-center">Who Am I?</h3>
             <p class="text-center">Who am I? What is my story? What led me to being involved in educational design and capability uplife? This section is where I answer all these questions and tell you how I got to where I am now.</p>
           </div>
-          <div class="col-lg my-auto text-center"><i onclick="whoAmI()" role="button" id="whoAmIIcon" class="fa-solid fa-person-circle-question fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn"></i>
+          <div class="col-lg my-auto text-center"><i onclick="whoAmI()" role="button" id="whoAmIIcon" class="fa-solid fa-person-circle-question fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn" title="Who Am I?"></i>
           </div>
         </div>
         <hr class="w-50 mx-auto border border-ts opacity-50">
@@ -194,7 +191,7 @@
             <h3 class="text-center">Projects</h3>
             <p class="text-center">Everything I have created or am creating to do with blended and online learning that I'm able to present is here. I continue to update this section as I progress through my career.</p>
         </div>
-          <div class="col-lg my-auto text-center"><i onclick="projects()" role="button" id="projectsIcon" class="fa-solid fa-users-between-lines fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn"></i></div>
+          <div class="col-lg my-auto text-center"><i onclick="projects()" role="button" id="projectsIcon" class="fa-solid fa-users-between-lines fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn" title="Projects"></i></div>
         </div>
         <hr class="w-50 mx-auto border border-ts opacity-50">
         <div class="row w-50 mx-auto">
@@ -202,7 +199,7 @@
             <h3 class="text-center">Research</h3>
             <p class="text-center">Read the research I completed during my masters. While it was a digital learning specialisation, I also looked into how to influence the system of teaching and learning in Higher Education.</p>
         </div>
-          <div class="col-lg my-auto text-center"><i onclick="research()" role="button" id="researchIcon" class="fa-solid fa-user-graduate fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn"></i></div>
+          <div class="col-lg my-auto text-center"><i onclick="research()" role="button" id="researchIcon" class="fa-solid fa-user-graduate fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn" title="Research"></i></div>
         </div>
         <hr class="w-50 mx-auto border border-ts opacity-50">
         <div class="row w-50 mx-auto">
@@ -210,7 +207,7 @@
             <h3 class="text-center">Contact Me</h3>
             <p class="text-center">Want to get in touch and talk design, education or feedback about my projects? Here is everywhere you can get in touch with me, however you like to connect with new people.</p>
           </div>
-          <div class="col-lg my-auto text-center"><i onclick="contact()" role="button" id="contactIcon" class="fa-solid fa-at fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn"></i></div>
+          <div class="col-lg my-auto text-center"><i onclick="contact()" role="button" id="contactIcon" class="fa-solid fa-at fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn" title="Contact Me"></i></div>
         </div>
         <hr class="w-50 mx-auto border border-ts opacity-50">
         <div class="row w-50 mx-auto">
@@ -218,7 +215,7 @@
             <h3 class="text-center">Sources</h3>
             <p class="text-center">What am I reading and listening to to keep in touch with what is important in my career? How did I make this site? Where did I get all these cool icons?</p>
           </div>
-          <div class="col-lg my-auto text-center"><i onclick="sources()" role="button" id="sourcesIcon" class="fa-solid fa-bookmark fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn"></i></div>
+          <div class="col-lg my-auto text-center"><i onclick="sources()" role="button" id="sourcesIcon" class="fa-solid fa-bookmark fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn" title="Sources"></i></div>
         </div>
       </div>
       <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
@@ -227,7 +224,7 @@
         <h1 class="p-2 text-center">Who Am I?</h1>
         <h3 class="text-center">A teaching and learning fanatic with a flair for UX design</h3>
         <div class="ratio ratio-16x9 w-50 mx-auto d-block">
-          <iframe src="https://www.youtube.com/embed/AqU5zabfty4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/AqU5zabfty4?si=2pepRkYErwUtwLAe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <h3 class="text-center mt-2">The Story So Far</h3>
         <div class="text-center">
@@ -237,33 +234,6 @@
           <p class="d-block mx-auto w-50">4:03 - 12:18 > What is my story?</p>
           <p class="d-block mx-auto w-50">12:19 - 12:42 > Thankyou and Credits</p>
         </div>
-        <!--<div class="row">
-          <div class="col-lg">
-            <h4>What do I stand for?</h4>
-            <p>As a learner I believe all learning should be accessible, flexible and interactive. As a teacher, I believe my role is to push my learners beyond their comfort zone, reflect effectively, and practice their knowledge with passion. As a UX designer, I believe all experiences digitally and face to face should be accessible, fair, enjoyable and make you want to come back for more.</p>
-            <h4>What is my work ethic like?</h4>
-            <p>I do not do things by halves. As you will learn from the examples I present in my portfolio, working with me means always striving for more for yourself, and for the project we are working on. If you are one of those people that says <strong>that's not in my job description, we are not going to work well together</strong>. If you are full of valuable ideas for a project, and want to plan and execute them no matter what it takes to get them over the line, I'm there for it.</p>
-            <h4>What do I do to stay sane?</h4>
-            <p>My first passion and my first degree was music performance. I am a guitarist first and foremost, but can hold a tune, play a bit of piano, and drums and pretty much any instrument I can put my hands on. I play basketball on a Sunday night at Coomera, and watch games in the American basketball league (NBA) daily. When I need to wind down I play a bit of PlayStation. I love playing Assassin's Creed and NBA, and when I really feel like indulging my inner child I jump on Fortnite for a few rounds.</p>
-          </div>
-          <div class="col-3 my-auto mx-auto">
-            <img src="img/TimSchollProfilePic.jpeg" alt="Tim Scholl Profile Pic" class="img-fluid" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg">
-            <h4>What's my story?</h4>
-            <p>I started as a Learning Support (LS) Teacher in Metropolitan South Institute of TAFE in Brisbane, QLD. I was a mathematics support teacher for tradespeople - electricians, plumbers and engineers. Lucky I have a natural knack for maths! From here I was offered a spot designing and delivering programs for adult learners in work preparation skills, and refugees preparing to enter Australia as citizens. After a year of doing this work, in 2012 I moved to Melbourne where I continued my work as an LS Teacher and Music Teacher at North Melbourne Institute of TAFE. During this entire time, in the background I was refining my skills in Learning Design, building online and blended activities for adult learners in many music courses and work preparation courses.</p>
-            <p>After 2 years of working with NMIT/Melbourne Polytechnic I started a new role at Box Hill Institute (BHI) as the Academic Advisor for international students. This is where I started to notice gaps in online resources at BHI for both domestic and international students. In particular how to research and reference effectively, and construct argumentative writing.</p>
-            <p>I worked with BHI for 4 years, and converted my role to full time, ongoing, permanent...only to leave 2 months later and take a casual opportunity at Monash University with the Faculty of Arts. I was incredibly excited to get a shot at the highest level of education available in the country with such a reputable institution, working in all the fields I love - Music, Theatre, Languages, Social Sciences and all the Arts Faculty has to offer. After 3 months I then gained a permanent, full-time, ongoing role with the Faculty of Arts, and continued to work as an Educational Designer for 3 years at Monash...enter...the pandemic.</p>
-            <p>I was lucky enough to have a son late in in 2019 and when the pandemic hit, my partner and I decided to return to QLD, not knowing when it would all end, and wanting to share our son with our extended family because he's a legend. I interviewed for 3 different positions at UQ, and it was Sam McKenzie - formerly the Project Manager for the eAssesment project - and Jacqui Lynagh, the current eAssessment Project Manager that saw my experience with upskilling teaching staff in the most difficult situation as a major asset to their team. I worked with eAssessment improving assessment in a number of courses using Inspera, and starting the design of staff professional development for improving assessment through using Inspera for just over a year before the Digital Learning Uplift (DLU) team had an opening and I took the opportunity to get back to full course design. Through working with the Medicine Faculty while being in the DLU I was offered a direct appointment as a full time learning designer and took it, because how often does an Arts major get a shot at working in Medicine or STEM?</p>
-            <p>Now surpassing 10 years of experience as a teacher and learning designer since I first started in QLD at MSIT, I am looking to continue my work in the field, lead newcomers wherever possible and look for my first senior position in the field.</p>
-          </div>
-          <div class="col-3 my-auto mx-auto">
-            <img src="img/TimSchollGtr-1.jpeg" alt="Tim Scholl on Guitar" class="img-fluid" />
-          </div>
-        </div>
-      </div>-->
       <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
       <div><span id="capability"></span></div>
       <div>
@@ -303,7 +273,7 @@
                   </div>
                   <div class="col-lg-3">
                     <figure><img src="img/annie-spratt-target.jpeg" alt="Annie Spratt - Target" class="img-fluid" />
-                      <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/jY9mXvA15W0" title="Annie Spratt - Unsplash" target="_blank">Annie Spratt</a></figcaption>
+                      <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/jY9mXvA15W0" title="Annie Spratt - Unsplash" rel="noopener" target="_blank">Annie Spratt</a></figcaption>
                     </figure>
                   </div>
                 </div>
@@ -327,7 +297,7 @@
                 <div class="col-lg-3">
                   <figure>
                     <img src="img/hannah-busing-team.jpeg" title="Unsplash - Hannah Busing Team" class="img-fluid" />
-                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/Zyx1bK9mqmA" target="_blank" title="Unsplash - Hannah Busing Team">Hannah Busing</a></figcaption>
+                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/Zyx1bK9mqmA" target="_blank" title="Unsplash - Hannah Busing Team" rel="noopener">Hannah Busing</a></figcaption>
                   </figure>
                 </div>
               </div>
@@ -354,7 +324,7 @@
                 <div class="col-lg-3">
                   <figure>
                     <img src="img/moritz-kindler-network.jpeg" title="Unsplash - Moritz Kindler" class="img-fluid" />
-                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/G66K_ERZRhM" target="_blank" title="Network - Moritz Kindler">Moritz Kindler</a></figcaption>
+                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/G66K_ERZRhM" target="_blank" title="Network - Moritz Kindler" rel="noopener">Moritz Kindler</a></figcaption>
                   </figure>
                 </div>
             </div>
@@ -392,13 +362,13 @@
                 <div class="col-lg-3 my-auto">
                   <figure>
                     <img src="img/stephen-dawson-statistics.jpeg" title="Unsplash - Stephen Dawson" class="img-fluid" />
-                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/qwtCeJ5cLYs" target="_blank" title="Statistics - Stephen Dawson">Stephen Dawson</a></figcaption>
+                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/qwtCeJ5cLYs" target="_blank" title="Statistics - Stephen Dawson" rel="noopener">Stephen Dawson</a></figcaption>
                   </figure>
                 </div>
               </div>
               <div class="row w-75 mx-auto">
                 <div class="col-lg text-center"><a class="text-decoration-none text-ts" title="ATS1665 Quantitative Results" href="https://drive.google.com/file/d/10_aYF8KYOpavbtMsQXFrDjHe58TR7g6B/view?usp=share_link" target="_blank" rel="noopener">
-                    <figure><i role="button" id="projectsIcon" class="fa-solid fa-ranking-star fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn"></i>
+                    <figure><i role="button" id="projectsIcon" class="fa-solid fa-ranking-star fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn" title="ATS1665 Quantitative Results"></i>
                       <figcaption class="mt-2">
                         <h6>ATS1665 Quantitative Results</h6>
                       </figcaption>
@@ -407,7 +377,7 @@
                 </div>
                 <div class="col-lg text-center"><a class="text-decoration-none text-ts" title="ATS1665 Qualitative Results" href="https://drive.google.com/file/d/12XkDCLvF7MS-xLT2MeQenbQnKfcAN3Zr/view?usp=share_link" target="_blank" rel="noopener">
                   <figure>
-                    <i role="button" id="projectsIcon" class="fa-solid fa-people-arrows fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn"></i>
+                    <i role="button" id="projectsIcon" class="fa-solid fa-people-arrows fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn" title="ATS1665 Qualitative Results"></i>
                     <figcaption class="mt-2">
                       <h6>ATS1665 Qualitative Results</h6>
                     </figcaption>
@@ -467,7 +437,7 @@
                   </div>
                   <div class="col-lg-3">
                     <figure><img src="img/annie-spratt-target.jpeg" alt="Annie Spratt - Target" class="img-fluid" />
-                      <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/jY9mXvA15W0" title="Annie Spratt - Unsplash" target="_blank">Annie Spratt</a></figcaption>
+                      <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/jY9mXvA15W0" title="Annie Spratt - Unsplash" target="_blank" rel="noopener">Annie Spratt</a></figcaption>
                     </figure>
                   </div>
                 </div>
@@ -491,7 +461,7 @@
                 <div class="col-lg-3">
                   <figure>
                     <img src="img/hannah-busing-team.jpeg" title="Unsplash - Hannah Busing Team" class="img-fluid" />
-                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/Zyx1bK9mqmA" target="_blank" title="Unsplash - Hannah Busing Team">Hannah Busing</a></figcaption>
+                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/Zyx1bK9mqmA" target="_blank" title="Unsplash - Hannah Busing Team" rel="noopener">Hannah Busing</a></figcaption>
                   </figure>
                 </div>
               </div>
@@ -518,7 +488,7 @@
                 <div class="col-lg-3">
                   <figure>
                     <img src="img/moritz-kindler-network.jpeg" title="Unsplash - Moritz Kindler" class="img-fluid" />
-                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/G66K_ERZRhM" target="_blank" title="Network - Moritz Kindler">Moritz Kindler</a></figcaption>
+                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/G66K_ERZRhM" target="_blank" title="Network - Moritz Kindler" rel="noopener">Moritz Kindler</a></figcaption>
                   </figure>
                 </div>
             </div>
@@ -556,13 +526,13 @@
                 <div class="col-lg-3 my-auto">
                   <figure>
                     <img src="img/stephen-dawson-statistics.jpeg" title="Unsplash - Stephen Dawson" class="img-fluid" />
-                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/qwtCeJ5cLYs" target="_blank" title="Statistics - Stephen Dawson">Stephen Dawson</a></figcaption>
+                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/qwtCeJ5cLYs" target="_blank" title="Statistics - Stephen Dawson" rel="noopener">Stephen Dawson</a></figcaption>
                   </figure>
                 </div>
               </div>
               <div class="row w-75 mx-auto">
                 <div class="col-lg text-center"><a class="text-decoration-none text-ts" title="ATS1665 Quantitative Results" href="https://drive.google.com/file/d/10_aYF8KYOpavbtMsQXFrDjHe58TR7g6B/view?usp=share_link" target="_blank" rel="noopener">
-                    <figure><i role="button" id="projectsIcon" class="fa-solid fa-ranking-star fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn"></i>
+                    <figure><i role="button" id="projectsIcon" class="fa-solid fa-ranking-star fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn" title="ATS1665 Quantitative Results"></i>
                       <figcaption class="mt-2">
                         <h6>ATS1665 Quantitative Results</h6>
                       </figcaption>
@@ -571,7 +541,7 @@
                 </div>
                 <div class="col-lg text-center"><a class="text-decoration-none text-ts" title="ATS1665 Qualitative Results" href="https://drive.google.com/file/d/12XkDCLvF7MS-xLT2MeQenbQnKfcAN3Zr/view?usp=share_link" target="_blank" rel="noopener">
                   <figure>
-                    <i role="button" id="projectsIcon" class="fa-solid fa-people-arrows fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn"></i>
+                    <i role="button" id="projectsIcon" class="fa-solid fa-people-arrows fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn" title="ATS1665 Qualitative Results"></i>
                     <figcaption class="mt-2">
                       <h6>ATS1665 Qualitative Results</h6>
                     </figcaption>
@@ -596,12 +566,12 @@
           <div class="accordion-body">
             <div class="row">
               <div class="col-lg my-auto">
-                <p class="mb-0">BEEST stands for <strong>B</strong>ootstrap <strong>E</strong>nhanced <strong>E</strong>lements <strong>S</strong>treamlining <strong>T</strong>ool. BEEST takes your basic input of text, links and choices and combines it with pre-written HTML to generate advanced HTML elements for Moodle without the need for complex HTML skills. <a href="https://beest.monash.edu" target="_blank" title="Monash BEEST">Take a look at the current state of the project here</a>.</p>
+                <p class="mb-0">BEEST stands for <strong>B</strong>ootstrap <strong>E</strong>nhanced <strong>E</strong>lements <strong>S</strong>treamlining <strong>T</strong>ool. BEEST takes your basic input of text, links and choices and combines it with pre-written HTML to generate advanced HTML elements for Moodle without the need for complex HTML skills. <a href="https://beest.monash.edu" target="_blank" title="Monash BEEST" rel="noopener">Take a look at the current state of the project here</a>.</p>
               </div>
               <div class="col-lg-3">
                 <figure>
                   <img src="img/joe-gardner-aim.jpeg" title="Unsplash - Joe Gardner" class="img-fluid" />
-                  <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/86T4OpohLTI" target="_blank" title="Statistics - Joe Gardner">Joe Gardner</a></figcaption>
+                  <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/86T4OpohLTI" target="_blank" title="Statistics - Joe Gardner" rel="noopener">Joe Gardner</a></figcaption>
                 </figure>
               </div>
           </div>
@@ -626,7 +596,7 @@
               <div class="col-lg-3">
                 <figure>
                   <img src="img/jason-goodman-meeting.jpeg" title="Unsplash - Jason Goodman" class="img-fluid" />
-                  <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/vbxyFxlgpjM" target="_blank" title="Statistics - Jason Goodman">Jason Goodman</a></figcaption>
+                  <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/vbxyFxlgpjM" target="_blank" title="Statistics - Jason Goodman" rel="noopener">Jason Goodman</a></figcaption>
                 </figure>
               </div>
             </div>
@@ -654,7 +624,7 @@
               <div class="col-lg-3 my-auto">
                 <figure>
                   <img src="img\alvaro-reyes-wireframe.jpg" title="Unsplash - Alvaro Reyes Wireframe" class="img-fluid" />
-                  <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/qWwpHwip31M" target="_blank" title="Unsplash - Alvaro Reyes Wireframe">Alvaro Reyes</a></figcaption>
+                  <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/qWwpHwip31M" target="_blank" title="Unsplash - Alvaro Reyes Wireframe" rel="noopener">Alvaro Reyes</a></figcaption>
                 </figure>
               </div>
             </div>
@@ -682,7 +652,7 @@
               <div class="col-lg-3 my-auto">
                 <figure>
                   <img src="img\carlos-muza-hpjSkU2UYSU-data.jpg" title="Unsplash - Carlos Muza Data" class="img-fluid" />
-                  <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/hpjSkU2UYSU" target="_blank" title="Unsplash - Carlos Muza Data">Carlos Muza</a></figcaption>
+                  <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/hpjSkU2UYSU" target="_blank" title="Unsplash - Carlos Muza Data" rel="noopener">Carlos Muza</a></figcaption>
                 </figure>
               </div>
             </div>
@@ -707,7 +677,7 @@
               </div>
               <div class="col-lg-3">
                 <figure><img src="img/ux-indonesia-design.jpeg" alt="UX Indonesia - Design" class="img-fluid" />
-                  <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/qC2n6RQU4Vw" title="UX Indonesia - Unsplash" target="_blank">UX Indonesia</a></figcaption>
+                  <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/qC2n6RQU4Vw" title="UX Indonesia - Unsplash" target="_blank" rel="noopener">UX Indonesia</a></figcaption>
                 </figure>
               </div>
             </div>
@@ -737,7 +707,7 @@
             <div class="col-lg-3 my-auto">
               <figure>
                 <img src="img\campaign-creators-gMsnXqILjp4-business-meeting.jpg" title="Unsplash - Campaign Creators Business Meeting" class="img-fluid" />
-                <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/gMsnXqILjp4" target="_blank" title="Unsplash - Campaign Creators Business Meeting">Campaign Creators</a></figcaption>
+                <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/gMsnXqILjp4" target="_blank" title="Unsplash - Campaign Creators Business Meeting" rel="noopener">Campaign Creators</a></figcaption>
               </figure>
             </div>
           </div>
@@ -763,7 +733,7 @@
             <div class="col-lg-3 my-auto">
               <figure>
                 <img src="img\john-schnobrich-FlPc9_VocJ4-training.jpg" title="Unsplash - John Schnobrich Training" class="img-fluid" />
-                <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/FlPc9_VocJ4" target="_blank" title="Unsplash - John Schnobrich Training">John Schnobrich</a></figcaption>
+                <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/FlPc9_VocJ4" target="_blank" title="Unsplash - John Schnobrich Training" rel="noopener">John Schnobrich</a></figcaption>
               </figure>
             </div>
           </div>
@@ -784,7 +754,7 @@
             <div class="col-lg-3 my-auto">
               <figure>
                 <img src="img\kenny-eliason-KYxXMTpTzek-on-time.jpg" title="Unsplash - Kenny Eliason On Time" class="img-fluid" />
-                <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/KYxXMTpTzek" target="_blank" title="Unsplash - Kenny Eliason On Time">Kenny Eliason</a></figcaption>
+                <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/KYxXMTpTzek" target="_blank" title="Unsplash - Kenny Eliason On Time" rel="noopener">Kenny Eliason</a></figcaption>
               </figure>
             </div>
           </div>
@@ -810,7 +780,7 @@
             <div class="col-lg-3 my-auto">
               <figure>
                 <img src="img\sam-moghadam-khamseh-T9OjDl5SbcM-live-music.jpg" title="Unsplash - Sam Moghadam Khamseh Live Music" class="img-fluid" />
-                <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/T9OjDl5SbcM" target="_blank" title="Unsplash - Sam Moghadam Khamseh Live Music">Sam Moghadam Khamseh</a></figcaption>
+                <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/T9OjDl5SbcM" target="_blank" title="Unsplash - Sam Moghadam Khamseh Live Music" rel="noopener">Sam Moghadam Khamseh</a></figcaption>
               </figure>
             </div>
           </div>
@@ -833,7 +803,7 @@
             <div class="col-lg-3 my-auto">
               <figure>
                 <img src="img\chris-montgomery-smgTvepind4-zoom.jpg" title="Unsplash - Chris Montgomery Zoom" class="img-fluid" />
-                <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/smgTvepind4" target="_blank" title="Unsplash - Chris Montgomery Zoom">Chris Montgomery</a></figcaption>
+                <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/smgTvepind4" target="_blank" title="Unsplash - Chris Montgomery Zoom" rel="noopener">Chris Montgomery</a></figcaption>
               </figure>
             </div>
           </div>
@@ -851,7 +821,7 @@
               <li>Sell my idea for online performance assessment to the Associate Dean for Education in Arts, Dean of the Music School and leader of Teaching Support for the Faculty of Arts.</li>
               <li>Engage Matt for support to execute the scripts required to fire off several steps automatically across the Google Suite</li>
               <li>Gather student data for assessment:
-                <ul style="list-style: lower-alpha;">
+                <ul class="list-lower-alpha">
                   <li>Student repertoire for the 6 performance units/200 students across 6 semesters</li>
                   <li>Connect students to relative markers. In performance at least 2 markers for each performance are required. A Monash staff member plus an instrumental specialist for the instrument the assessed student is playing</li>
                 </ul>
@@ -864,7 +834,7 @@
               for charts</li>
               <li>Each student then received an automated email linking to another form to upload their video-recorded performances</li>
               <li>Once the folders from step 2 were all populated with videos:
-                <ul style="list-style: lower-alpha;">
+                <ul class="list-lower-alpha">
                   <li>Students were sent a view link to their Google Drive folder to submit to Moodle</li>
                   <li>Matt and I were notified of the submission end date for each unit group. On this date, we used data that had all the markers' names, emails, students they were to mark, and instrumental specialty if they had one. We then automated injecting sharing permissions into the folders they were meant to have access to</li>
                 </ul>
@@ -877,7 +847,7 @@
           <div class="col-lg-3 my-auto">
             <figure>
               <img src="img\junior-ferreira-7esRPTt38nI-process.jpg" title="Unsplash - Junior Ferreira Process" class="img-fluid" />
-              <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/7esRPTt38nI" target="_blank" title="Unsplash - Junior Ferreira Process">Junior Ferreira</a></figcaption>
+              <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/7esRPTt38nI" target="_blank" title="Unsplash - Junior Ferreira Process" rel="noopener">Junior Ferreira</a></figcaption>
             </figure>
           </div>
         </div>
@@ -899,7 +869,7 @@
           <div class="col-lg-3 my-auto">
             <figure>
               <img src="img\ross-sneddon-sWlDOWk0Jp8-strategy.jpg" title="Unsplash - Ross Sneddon Strategy" class="img-fluid" />
-              <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/sWlDOWk0Jp8" target="_blank" title="Unsplash - Ross Sneddon Strategy">Ross Sneddon</a></figcaption>
+              <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/sWlDOWk0Jp8" target="_blank" title="Unsplash - Ross Sneddon Strategy" rel="noopener">Ross Sneddon</a></figcaption>
             </figure>
           </div>
         </div>
@@ -936,7 +906,7 @@
           <p>This paper explores the history of higher education (HE) and what has led to the current tense state, where instead of a balanced approach to managing and implementing quality teaching and research, there is pressure either directly or indirectly to favour research by HE providers. My approach was not to simply say that higher education needs to implement teaching heavy positions. Instead, it was to dive deeper into what makes research worthy of such favour, and how higher education in Australia can implement a similar path to balance value for teaching. The main discovery was systems that are in place to measure research, and rank universities based on their research are a priority of the universities themselves. If a rigorous system of reviewing and ranking teaching and learning quality could be created and put in place, we would see external ranking systems by independent bodies rank universities on teaching and learning quality as well as research quality. The main limitations of this study were the unclear nature of financial reports in relation to funding and expenditure on teaching and learning, and an absence of literature on higher education institutions implementing processes for measuring teaching and learning quality. Download the full paper by clicking the icon.</p>
         </div>
         <div class="col-lg-3 my-auto">
-          <a class="text-decoration-none" role="button" href="https://drive.google.com/file/d/1921yQDK0C5D0jhsiRLEBffwUpIPAZDB3/view?usp=sharing" target="_blank" title="Timothy Scholl - Building a Quality Balance in Teaching and Research full paper">
+          <a class="text-decoration-none" role="button" href="https://drive.google.com/file/d/1921yQDK0C5D0jhsiRLEBffwUpIPAZDB3/view?usp=sharing" target="_blank" title="Timothy Scholl - Building a Quality Balance in Teaching and Research full paper" rel="noopener">
             <p class="text-center"><i class="fa-solid fa-scale-balanced fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
             <h6 class="text-center text-ts">Download the full paper</h6>
           </a>
@@ -955,7 +925,7 @@
           <p>Mentors who have been in the country for 2+ years could provide new students incredible insight into navigating Australia's system to ensure fairness and safety while in the country. Secondly, language acquisition, while encouraged in the student's home country to achieve a high enough level of confidence with language to attain a position in an Australian institution, tends to come to a halt once enrolled in study due to many competing factors for a student's time and also cultural differences. A language exchange would see local and international students share language knowledge, build relationships and counter the stagnation of language acquisition while also familiarising participants with unfamiliar cultural expectations and norms. Download the full paper by clicking the icon.</p>
         </div>
         <div class="col-lg-3 my-auto">
-          <a class="text-decoration-none" role="button" href="https://drive.google.com/open?id=1zw1XKvKWwP8Lm__r7WKzhxdoyRuzN2Hm" target="_blank" title="Timothy Scholl - Experiential Learning and Community Service Learning Compared">
+          <a class="text-decoration-none" role="button" href="https://drive.google.com/open?id=1zw1XKvKWwP8Lm__r7WKzhxdoyRuzN2Hm" target="_blank" title="Timothy Scholl - Experiential Learning and Community Service Learning Compared" rel="noopener">
             <p class="text-center"><i class="fa-solid fa-bolt fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
             <h6 class="text-center text-ts">Download the full paper</h6>
           </a>
@@ -968,7 +938,7 @@
     <div class="row w-50 mx-auto">
       <div class="col-lg my-auto">
         <h3 class="text-center">Get in touch</h3>
-        <p class="text-center"><a href="https://www.linkedin.com/in/tim-scholl/" target="_blank" title="Tim Scholl - LinkedIn"><i class="fa-brands fa-linkedin text-ts iconBtnSm"></i></a> LinkedIn - <a href="https://www.linkedin.com/in/tim-scholl/" target="_blank" title="Tim Scholl - LinkedIn">My LinkedIn Profile</a></p>
+        <p class="text-center"><a href="https://www.linkedin.com/in/tim-scholl/" target="_blank" title="Tim Scholl - LinkedIn" rel="noopener"><i class="fa-brands fa-linkedin text-ts iconBtnSm"></i></a> LinkedIn - <a href="https://www.linkedin.com/in/tim-scholl/" target="_blank" title="Tim Scholl - LinkedIn" rel="noopener">My LinkedIn Profile</a></p>
         <p class="text-center"><i class="fa-solid fa-inbox text-ts iconBtnSm"></i> Email - <span class="emailToCopy">t.scholl87@gmail.com</span> <span class="badge text-bg-ts copyBadge align-top" role="button">Click to copy email address</span></p>
       </div>
       <div class="col mx-auto">
@@ -988,10 +958,10 @@
               <h3 class="card-title text-center mt-3">Nielson Norman Group</h3>
               <h5 class="text-center"><i class="fa-solid fa-laptop text-ts"></i> Website - NN Group</h5>
               <p class="card-text">Globally renowned UX experts. With articles for beginners in UX through to more advanced and complex concepts, NN/Group is the first place I go to for answers.</p>
-              <p class="text-center"><a href="https://www.nngroup.com/" target="_blank" title="Nielson Norman Group Website">Nielson Norman Group Website</a></p>
+              <p class="text-center"><a href="https://www.nngroup.com/" target="_blank" title="Nielson Norman Group Website" rel="noopener">Nielson Norman Group Website</a></p>
               <h5 class="text-center"><i class="fa-solid fa-podcast text-ts"></i> Podcast - NN Group</h5>
               <p class="card-text">On top of offering top class research, the group provides a podcast with interviews from experts in the field that do the hard yards and walk the talk. Click below to go to their podcast page and find the link for your preferred podcast platform.</p>
-              <p class="text-center"><a href="https://podcasters.spotify.com/pod/show/nngroup" target="_blank" title="NN Group Podcast">NN Group Podcast page</a></p>
+              <p class="text-center"><a href="https://podcasters.spotify.com/pod/show/nngroup" target="_blank" title="NN Group Podcast" rel="noopener">NN Group Podcast page</a></p>
             </div>
           </div>
         </div>
@@ -1002,10 +972,10 @@
               <h3 class="card-title text-center">Steven Bartlett</h3>
               <h5 class="text-center"><i class="fa-solid fa-laptop text-ts"></i> Website - Steven Bartlett</h5>
               <p class="card-text">Steven Bartlett's is a well known digital marketing entrepeneur. Following his ventures and product releases are a great lesson in UX and product design.</p>
-              <p class="text-center"><a href="https://stevenbartlett.com/" target="_blank" title="Steven Bartlett's Website">Steven Bartlett's Website</a></p>
+              <p class="text-center"><a href="https://stevenbartlett.com/" target="_blank" title="Steven Bartlett's Website" rel="noopener">Steven Bartlett's Website</a></p>
               <h5 class="text-center"><i class="fa-solid fa-podcast text-ts"></i> Podcast - Diary of a CEO</h5>
               <p>In amongst many other ventures, he now leads one of the most consistently popular pod/vodcasts; Diary of a CEO. Interviewing experts in multiple fields focusing on health and wellbeing. My personal favourites have been Simon Sinek, Johann Hari, Julian Treasure and Dr. Tali Sharot.</p>
-              <p class="text-center"><a href="https://stevenbartlett.com/the-diary-of-a-ceo-podcast/" target="_blank" title="Diary of a CEO Podcast">Diary of a CEO Podcast page</a></p>
+              <p class="text-center"><a href="https://stevenbartlett.com/the-diary-of-a-ceo-podcast/" target="_blank" title="Diary of a CEO Podcast" rel="noopener">Diary of a CEO Podcast page</a></p>
             </div>
           </div>
         </div>
@@ -1016,10 +986,10 @@
               <h3 class="card-title text-center">Michael Henderson</h3>
               <h5 class="text-center"><i class="fa-solid fa-laptop text-ts"></i> Website - Feedback for learning</h5>
               <p class="card-text">Michael Henderson and Michael Phillips are modern educational researchers at Monash that I studied with. I find their attitude inspiring. To never stop wanting to reflect and learn.</p>
-              <p class="text-center"><a href="https://feedbackforlearning.org/" target="_blank" title="Feedback for learning">Feedback for learning website</a></p>
+              <p class="text-center"><a href="https://feedbackforlearning.org/" target="_blank" title="Feedback for learning" rel="noopener">Feedback for learning website</a></p>
               <h5 class="text-center"><i class="fa-solid fa-podcast text-ts"></i> Podcast - Meet the Education Researcher</h5>
               <p>This podcast is produced by Neil Selwyn, who works alongside Michael Henderson. While not directly related to the project, this podcast shares many of the same views and attitudes. Asking difficult questions, engaging people who are open to change. Short, sharp, and well worth a listen.</p>
-              <p class="text-center"><a href="https://podcasts.apple.com/au/podcast/meet-the-education-researcher/id1230763892" target="_blank" title="Meet the Education Researcher podcast page">Meet the Education Researcher Podcast page</a></p>
+              <p class="text-center"><a href="https://podcasts.apple.com/au/podcast/meet-the-education-researcher/id1230763892" target="_blank" title="Meet the Education Researcher podcast page" rel="noopener">Meet the Education Researcher Podcast page</a></p>
             </div>
           </div>
         </div>
@@ -1043,10 +1013,10 @@
     </div>
   </div>
 </div>
-<div style="margin: 7rem 0;"></div>
+<div class="my-6"></div>
 <nav class="navbar fixed-bottom navbar-dark text-bg-ts mt-5">
   <div class="container-fluid">
-    <span class="navbar-text text-white">Made with <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/" target="_blank" title="Get Bootstrap">Bootstrap v5.2</a>, <a href="https://fontawesome.com/search?o=r&m=free" target="_blank" title="Font Awesome v6 Free Icon Search">FontAwesome v6.1</a> by Tim Scholl. Last updated 15th March, 2023.</span>
+    <span class="navbar-text text-white">Made with <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/" target="_blank" title="Get Bootstrap" rel="noopener">Bootstrap v5.2</a>, <a href="https://fontawesome.com/search?o=r&m=free" target="_blank" title="Font Awesome v6 Free Icon Search" rel="noopener">FontAwesome v6.1</a> by Tim Scholl. Last updated 15th March, 2023.</span>
   </div>
 </nav>
 <a class="text-bg-ts p-2" data-bs-toggle="tooltip" data-bs-title="Back to top" data-bs-placement="top" role="button" id="bttBtn" style="position: fixed; bottom: 70px; right:50px; display: none;" onclick="javascript:window.scrollTo(0, 0);"><i class="fa-solid fa-arrow-up fa-2x"></i></a>
