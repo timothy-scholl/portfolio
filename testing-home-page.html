@@ -1,1172 +1,1288 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>Tim Scholl Portfolio</title>
-    <link rel="icon" href="https://timothy-scholl.github.io/portfolio/tim-smile-favicon.png" type="image/gif" />
-       
-    <!--jQuery version 3.6.0-->
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<head>
+  <!-- ============================================================
+       Tim Scholl Portfolio — index.html
+       Last updated: March 2026
+       Built with Bootstrap 5.2.3 (CDN), Font Awesome 6.4 (CDN),
+       Google Fonts: Manrope + Sanchez
+  ============================================================ -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Tim Scholl — Learning Designer and Capability Partner. Portfolio of work across Aussie Broadband, Monash University and University of Queensland.">
+  <title>Tim Scholl — Portfolio</title>
 
-    <!-- Bootstrap CSS -->
-       <link rel="stylesheet" type="text/css" href="https://timothy-scholl.github.io/fontawesome-v6.1.1-free/css/all.css" />
-       <link rel="stylesheet" type="text/css" href="https://timothy-scholl.github.io/portfolio/bootstrap-5.2.1-dist\css\bootstrap.css" />
-    <!--Google Font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Sanchez&display=swap" rel="stylesheet">
-    <!--Bootstrap JS-->
-       <script src="https://timothy-scholl.github.io/portfolio/bootstrap-5.2.1-dist/js/bootstrap.bundle.js" crossorigin="anonymous"></script>
-       <!--<script src="https://uq-itali.github.io/uqlearnx/medi7100/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.js"></script>-->
-    <style>
-      body{
-        font-family: "Manrope", sans-serif !important;
-      }
-       html {
-        scroll-padding-top: 70px; /* adjust based on your navbar height */
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Sanchez', serif;
-      }
-        .dropdown .dropdown-menu {
-         visibility: hidden;
-         opacity: 0;
-         height: 0px;
-         padding: 0px;
-         transition: visibility 0s, height 0.5s linear, padding 0s, opacity 0.3s linear;
-        }
-        .dropdown:hover .dropdown-menu {
-            visibility: visible;
-            height: inherit;
-            padding: 5px 0px !important;
-            opacity: 1;
-        }
+  <!-- Favicon -->
+  <link rel="icon" href="https://timothy-scholl.github.io/portfolio/tim-smile-favicon.png" type="image/png">
 
-        .dropdown-menu {
-            margin-top: 0;
-        }
-        div.form-check-inline{
-            line-height: 1.5rem;
-            display: inline-flex;
-        }
-        label{ 
-            line-height: 1.5rem;
-            margin-left: 5px;
-        }
-        input[type='radio'] { 
-            line-height: 1.5rem;
-            margin: auto;
-        }
-        i.iconBtn:hover {
-          color: #008db3 !important;
-          border: #008db3 3px solid !important;
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Sanchez&display=swap" rel="stylesheet">
 
-        }
-        i.iconBtnSm:hover {
-          color: #008db3 !important;
-        }
-        a#bttBtn:hover {
-          background: #008db3 !important;
-        }
-        span#home{
-            position: relative;
-            top:-6rem;
-        }
-        .my-6 { 
-          margin-top: 6rem; 
-          margin-bottom: 6rem; 
-        }
-        .list-lower-alpha {
-          list-style-type: lower-alpha;
-          margin-left: 1.25rem; /* adjust if needed */
-        }
-    </style>
-        <script type="text/javascript"> 
-        window.addEventListener('load',function(){  
-       const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-       const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-      });
-      function whoAmI(){
-          document.getElementById('whoAmIBtn').click();
+  <!-- Bootstrap 5.2.3 CSS (CDN — minified) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
+  <!-- Font Awesome 6.4 (CDN — minified) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* ── Base typography ── */
+    body {
+      font-family: 'Manrope', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Sanchez', serif;
+    }
+
+    /* ── Brand colour tokens ── */
+    :root {
+      --ts-navy:  #004A5E;
+      --ts-teal:  #008db3;
+    }
+    .text-ts   { color: var(--ts-navy) !important; }
+    .bg-ts     { background-color: var(--ts-navy) !important; }
+    .border-ts { border-color: var(--ts-navy) !important; }
+
+    /* ── Navbar ── */
+    .navbar {
+      background-color: var(--ts-navy);
+    }
+    .navbar .nav-link,
+    .navbar .navbar-brand {
+      color: rgba(255,255,255,0.85);
+      transition: color 0.15s ease;
+    }
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus {
+      color: #fff;
+    }
+    .navbar .nav-link.active {
+      color: #fff;
+      font-weight: 700;
+    }
+    /* Smooth scroll offset for fixed nav */
+    html {
+      scroll-padding-top: 68px;
+    }
+
+    /* ── Dropdown ── */
+    .dropdown-menu {
+      background-color: var(--ts-teal);
+      border: none;
+      border-radius: 0 0 6px 6px;
+      padding: 4px 0;
+    }
+    .dropdown-item {
+      color: #fff;
+      font-size: 0.9rem;
+    }
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+      background-color: var(--ts-navy);
+      color: #fff;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 5rem 0 3.5rem;
+      border-bottom: 2px solid var(--ts-navy);
+      margin-bottom: 0;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: #212529;
+    }
+    .hero .subtitle {
+      font-size: 1.15rem;
+      color: #6c757d;
+    }
+
+    /* ── Section dividers ── */
+    .section-block {
+      padding: 4rem 0;
+      border-top: 1px solid #dee2e6;
+    }
+    .section-block:first-of-type {
+      border-top: none;
+    }
+
+    /* ── Project header ── */
+    .project-org {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6c757d;
+      margin-bottom: 6px;
+    }
+    .project-title {
+      font-size: 1.7rem;
+      color: #212529;
+      margin-bottom: 0.75rem;
+      line-height: 1.25;
+    }
+    .project-summary {
+      font-size: 1rem;
+      color: #495057;
+      line-height: 1.75;
+      max-width: 640px;
+      margin-bottom: 1rem;
+    }
+
+    /* ── Tags ── */
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: #f1f3f5;
+      color: #495057;
+      border: 1px solid #dee2e6;
+      margin: 0 4px 4px 0;
+    }
+
+    /* ── Timeline ── */
+    .timeline-wrap {
+      display: flex;
+      gap: 0;
+    }
+    .timeline-spine {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 1.5rem;
+      flex-shrink: 0;
+    }
+    .timeline-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--ts-navy);
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+    .timeline-line {
+      width: 2px;
+      flex: 1;
+      background: #dee2e6;
+      margin: 6px 0;
+      min-height: 40px;
+    }
+    .timeline-beats {
+      flex: 1;
+    }
+
+    /* ── Beat (each narrative step) ── */
+    .beat {
+      padding-bottom: 2.5rem;
+    }
+    .beat:last-child {
+      padding-bottom: 0;
+    }
+    .beat-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6c757d;
+      margin-bottom: 6px;
+      font-family: 'Manrope', sans-serif;
+    }
+    .beat-title {
+      font-size: 1.2rem;
+      color: #212529;
+      margin-bottom: 0.75rem;
+      line-height: 1.35;
+    }
+    .beat-body {
+      font-size: 0.95rem;
+      color: #495057;
+      line-height: 1.8;
+      max-width: 620px;
+      margin-bottom: 1rem;
+    }
+
+    /* ── Stat cards ── */
+    .stat-grid {
+      display: grid;
+      gap: 10px;
+      margin-top: 0.5rem;
+    }
+    .stat-grid-2 { grid-template-columns: repeat(2, 1fr); max-width: 320px; }
+    .stat-grid-3 { grid-template-columns: repeat(3, 1fr); max-width: 440px; }
+    .stat-card {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .stat-card .num {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ts-navy);
+      font-family: 'Manrope', sans-serif;
+    }
+    .stat-card .lbl {
+      font-size: 0.75rem;
+      color: #6c757d;
+      margin-top: 4px;
+    }
+
+    /* ── Pull quote ── */
+    .pullquote {
+      border-left: 3px solid var(--ts-navy);
+      border-radius: 0;
+      padding: 4px 0 4px 16px;
+      margin: 1rem 0;
+      max-width: 580px;
+    }
+    .pullquote p {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: #495057;
+      line-height: 1.65;
+      margin-bottom: 4px;
+    }
+    .pullquote cite {
+      font-size: 0.75rem;
+      color: #6c757d;
+      font-style: normal;
+    }
+
+    /* ── Who Am I video section ── */
+    .who-timestamp {
+      font-size: 0.85rem;
+      color: #6c757d;
+      padding: 4px 0;
+      border-bottom: 1px solid #f1f3f5;
+    }
+    .who-timestamp:last-child {
+      border-bottom: none;
+    }
+    .who-timestamp span {
+      color: var(--ts-navy);
+      font-weight: 700;
+      font-size: 0.8rem;
+      min-width: 110px;
+      display: inline-block;
+    }
+
+    /* ── Contact ── */
+    .contact-link {
+      color: var(--ts-navy);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .contact-link:hover {
+      color: var(--ts-teal);
+      text-decoration: underline;
+    }
+
+    /* ── Sources cards ── */
+    .source-card {
+      background: #fff;
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      padding: 1.25rem;
+      height: 100%;
+    }
+    .source-card h4 {
+      font-size: 1rem;
+      color: #212529;
+      margin-bottom: 0.25rem;
+    }
+    .source-card .source-type {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #6c757d;
+      margin-bottom: 0.5rem;
+    }
+    .source-card p {
+      font-size: 0.85rem;
+      color: #495057;
+      line-height: 1.65;
+      margin-bottom: 0.5rem;
+    }
+    .source-card a {
+      font-size: 0.85rem;
+      color: var(--ts-navy);
+    }
+
+    /* ── Back to top button ── */
+    #bttBtn {
+      position: fixed;
+      bottom: 80px;
+      right: 40px;
+      display: none;
+      z-index: 999;
+      background: var(--ts-navy);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    #bttBtn:hover {
+      background: var(--ts-teal);
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: var(--ts-navy);
+      color: rgba(255,255,255,0.7);
+      font-size: 0.8rem;
+      padding: 1rem 0;
+    }
+    .site-footer a {
+      color: rgba(255,255,255,0.9);
+    }
+
+    /* ── Responsive tweaks ── */
+    @media (max-width: 576px) {
+      .stat-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
       }
-      function home(){
-          document.getElementById('homeBtn').click();
+      .timeline-spine {
+        margin-right: 1rem;
       }
-      function contact(){
-          document.getElementById('contactBtn').click();
-      }
-      function projectsABB(){
-          document.getElementById('projectsABB').scrollIntoView();;
-      }
-      function projects(){
-          document.getElementById('projects').scrollIntoView();;
-      }
-      function learningHour(){
-          document.getElementById('learningHourBtn').click();
-      }
-      function abbCompliance(){
-          document.getElementById('abbComplianceBtn').click();
-      }
-      function ats1665(){
-          document.getElementById('ats1665Btn').click();
-      }
-      function beest(){
-          document.getElementById('beestBtn').click();
-      }
-      function mdDesign(){
-          document.getElementById('mdDesignBtn').click();
-      }
-      function musicSubmission(){
-          document.getElementById('musicPerfBtn').click()
-      }
-      function research(){ 
-          document.getElementById('research').scrollIntoView();
-      }
-      function qualityTL(){
-          document.getElementById('qualityTLBtn').click()
-      }
-      function learningInAction(){
-          document.getElementById('learningInActionBtn').click()
-      }
-      function sources(){
-          document.getElementById('sourcesBtn').click();
-      }
-    </script>
-  </head>
-  <body>
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top text-bg-ts">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="#home">
-            <img src="https://timothy-scholl.github.io/portfolio/tim-smile-favicon.png" alt="Welcome Avatar" width="50" height="auto">
-          </a>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav nav" id="myTab">
-            <li class="nav-item" role="presentation">
-                <a id="homeBtn" class="nav-link active" href="#home">Home</a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a id="whoAmIBtn" class="nav-link" href="#whoAmI">Who Am I?</a>
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
+    <div class="container">
+
+      <!-- Brand / logo -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+        <img src="https://timothy-scholl.github.io/portfolio/tim-smile-favicon.png"
+             alt="Tim Scholl" width="36" height="36">
+        <span class="fw-bold" style="font-family:'Manrope',sans-serif;font-size:0.95rem">Tim Scholl</span>
+      </a>
+
+      <!-- Mobile toggle -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav links -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
           </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#projectsABBBtn" onclick="projectsABB()" role="button" aria-expanded="false">Projects with Aussie Broadband</a>
-                <ul class="dropdown-menu">
-                    <li><a id="abbComplianceBtn" class="dropdown-item" href="#abbCompliance">Aussie Broadband: Compliance Uplift</a></li>
-                    <li><a id="learningHourBtn" class="dropdown-item" href="#learningHour">Aussie Broadband: Learning Hour with SecOps</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#projectsBtn" onclick="projects()" role="button" aria-expanded="false">Projects with Universities</a>
-                <ul class="dropdown-menu">
-                    <li><a id="ats1665Btn" class="dropdown-item" href="#ats1665">Monash Uni: ATS1665 - Understanding Gender 1</a></li>
-                    <li><a id="beestBtn" class="dropdown-item" href="#beest">Monash Uni: BEEST Design Support</a></li>
-                    <li><a id="musicPerfBtn" class="dropdown-item" href="#musicPerf">Monash Uni: Music Performance in the Pandemic</a></li>
-                    <li><a id="mdDesignBtn" class="dropdown-item" href="#mdDesign">Uni of QLD: MD Design Project</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="researchBtn" onclick="research()" href="#research" role="button" aria-expanded="false">Research</a>
-              <ul class="dropdown-menu">
-                  <li><a id="qualityTLBtn" class="dropdown-item" href="#qualityTL">Balancing Quality in Teaching and Research</a></li>
-                  <li><a id="learningInActionBtn" class="dropdown-item" href="#learningInAction">Experience and Reflection: Learning in Action</a></li>
-              </ul>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#who-am-i">Who am I?</a>
           </li>
-            <li class="nav-item" role="presentation">
-                <a id="contactBtn" class="nav-link" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a id="resumeBtn" class="nav-link" href="https://drive.google.com/file/d/13_C1Or-8dQXl-jWLb5v2phAlZQH85KT3/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+
+          <!-- Projects with ABB dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#abb-projects"
+               data-bs-toggle="dropdown" role="button" aria-expanded="false">
+              Aussie Broadband
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#compliance-uplift">Compliance uplift</a></li>
+              <li><a class="dropdown-item" href="#learning-hour">Learning Hour — SecOps</a></li>
+            </ul>
           </li>
-            <li class="nav-item" role="presentation">
-              <a id="sourcesBtn" class="nav-link" href="#sources">Sources</a>
+
+          <!-- Projects with Universities dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#uni-projects"
+               data-bs-toggle="dropdown" role="button" aria-expanded="false">
+              Universities
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#ats1665">ATS1665 — Understanding Gender</a></li>
+              <li><a class="dropdown-item" href="#beest">BEEST</a></li>
+              <li><a class="dropdown-item" href="#md-design">UQ MD Design</a></li>
+              <li><a class="dropdown-item" href="#music-perf">Music performance in the pandemic</a></li>
+            </ul>
           </li>
+
+          <!-- Research dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#research"
+               data-bs-toggle="dropdown" role="button" aria-expanded="false">
+              Research
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#research-quality">Balancing quality in T&amp;R</a></li>
+              <li><a class="dropdown-item" href="#research-learning">Experience &amp; reflection</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://drive.google.com/file/d/13_C1Or-8dQXl-jWLb5v2phAlZQH85KT3/view?usp=sharing"
+               target="_blank" rel="noopener">
+              Résumé <i class="fa-solid fa-arrow-up-right-from-square fa-xs ms-1"></i>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#sources">Sources</a>
+          </li>
+
         </ul>
       </div>
     </div>
   </nav>
-  <div class="my-6"></div>
-    <div id="content" class="container">
-        <div><span id="home"></span></div>
-      <div>
-        <h1 class="text-center">Tim Scholl</h1>
-        <h2 class="text-center">Learning Designer & Capability Partner with a UX Twist</h2>
-        <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
-        <div class="row mx-auto w-100">
-          <div class="row w-50 mx-auto mt-3">
-            <div class="col-lg-8 my-auto mx-auto" onclick="whoAmI()" role="button">
-              <h3 class="text-center">Who Am I?</h3>
-              <p class="text-center">Who am I? What is my story? What led me to being involved in educational design and capability uplift? This section is where I answer all these questions and tell you how I got to where I am now.</p>
-            </div>
-            <div class="col-lg my-auto text-center"><i onclick="whoAmI()" role="button" id="whoAmIIcon" class="fa-solid fa-person-circle-question fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn" title="Who Am I?"></i>
-            </div>
-          </div>
-          <!--<hr class="w-50 mx-auto border border-ts opacity-50">-->
-          <div class="row w-50 mx-auto">
-            <div class="col-lg-8 my-auto  mx-auto" onclick="contact()" role="button">
-              <h3 class="text-center">Contact Me</h3>
-              <p class="text-center">Want to get in touch and talk design, education or feedback about my projects? Here is everywhere you can get in touch with me, however you like to connect with new people.</p>
-            </div>
-            <div class="col-lg my-auto text-center"><i onclick="contact()" role="button" id="contactIcon" class="fa-solid fa-at fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn" title="Contact Me"></i></div>
-          </div>
+
+
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+  <main class="container" id="home">
+
+
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <section class="hero text-center">
+      <img src="https://timothy-scholl.github.io/portfolio/tim-smile-favicon.png"
+           alt="Tim Scholl" width="72" height="72"
+           class="rounded-circle mb-3 border border-3 border-ts">
+      <h1>Tim Scholl</h1>
+      <p class="subtitle mt-2">Learning Designer &amp; Capability Partner with a UX twist</p>
+      <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
+        <a href="#who-am-i" class="btn btn-outline-secondary btn-sm">Who am I?</a>
+        <a href="#abb-projects" class="btn btn-outline-secondary btn-sm">Aussie Broadband</a>
+        <a href="#uni-projects" class="btn btn-outline-secondary btn-sm">Universities</a>
+        <a href="#research" class="btn btn-outline-secondary btn-sm">Research</a>
+        <a href="#contact" class="btn btn-outline-secondary btn-sm">Contact</a>
+      </div>
+    </section>
+
+
+    <!-- ── WHO AM I ──────────────────────────────────────────── -->
+    <section class="section-block" id="who-am-i">
+      <p class="project-org">About me</p>
+      <h2 class="project-title">Who am I?</h2>
+      <p class="project-summary">
+        A teaching and learning fanatic with a flair for UX design. I've spent my career
+        making learning experiences that people actually want to engage with — across higher
+        education, corporate L&amp;D, and everything in between.
+      </p>
+
+      <!-- Embedded video -->
+      <div class="ratio ratio-16x9 mb-3" style="max-width:640px">
+        <iframe src="https://www.youtube.com/embed/AqU5zabfty4?si=2pepRkYErwUtwLAe"
+                title="Tim Scholl — Who Am I?"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+      </div>
+
+      <!-- Timestamps -->
+      <div style="max-width:400px">
+        <div class="who-timestamp"><span>0:00 – 0:40</span> What do I stand for?</div>
+        <div class="who-timestamp"><span>0:41 – 2:30</span> What is my work ethic like?</div>
+        <div class="who-timestamp"><span>2:31 – 4:02</span> What do I do to stay sane?</div>
+        <div class="who-timestamp"><span>4:03 – 12:18</span> What is my story?</div>
+        <div class="who-timestamp"><span>12:19 – 12:42</span> Thank you and credits</div>
+      </div>
+    </section>
+
+
+    <!-- ── ABB PROJECTS INTRO ────────────────────────────────── -->
+    <section class="section-block" id="abb-projects">
+      <p class="project-org">Work</p>
+      <h2 class="project-title">Projects with Aussie Broadband</h2>
+      <p class="project-summary">
+        Since joining ABB, I've led learning design and capability work across the business —
+        from overhauling the compliance suite to building structured L&amp;D systems with
+        the Security Operations team.
+      </p>
+    </section>
+
+
+    <!-- ── COMPLIANCE UPLIFT ─────────────────────────────────── -->
+    <section class="section-block" id="compliance-uplift">
+      <div class="project-org">Aussie Broadband</div>
+      <h2 class="project-title">Compliance uplift</h2>
+      <p class="project-summary">
+        Reduced a 17-module compliance suite to 12 meaningful, role-relevant modules —
+        replacing scroll-and-click acknowledgement with genuine knowledge checks, and drawing
+        praise from external auditors for an approach well ahead of industry standard.
+      </p>
+      <div class="mb-4">
+        <span class="tag">Learning Design</span>
+        <span class="tag">Compliance</span>
+        <span class="tag">Workday</span>
+        <span class="tag">Articulate 360</span>
+        <span class="tag">UX</span>
+      </div>
+
+      <div class="timeline-wrap">
+        <!-- Spine -->
+        <div class="timeline-spine">
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-dot"></div>
         </div>
-        <hr class="w-50 mx-auto border border-ts opacity-50">
-        <div class="row mx-auto w-100">
-          <div class="row w-50 mx-auto">
-            <div class="col-lg-8 my-auto  mx-auto" onclick="projectsABB()" role="button">
-              <h3 class="text-center">Projects with Aussie Broadband</h3>
-              <p class="text-center">After a year of working with Aussie Broadband, these are a few of the major projects I have completed work on relating to Compliance training, and Learning and Development for the Security Operations team.</p>
+
+        <!-- Beats -->
+        <div class="timeline-beats">
+
+          <div class="beat">
+            <p class="beat-label">The challenge</p>
+            <h3 class="beat-title">Completion meant nothing. There was no way to know if anyone had actually learned anything.</h3>
+            <p class="beat-body">
+              The compliance suite was legislatively grounded — that wasn't the problem. The
+              problem was that modules relied on scroll-and-acknowledge: pages of content
+              people could skip past, hit the button, and be marked complete. With no knowledge
+              checks, the business had no evidence of understanding. Completion data existed.
+              Comprehension data didn't.
+            </p>
+            <div class="stat-grid stat-grid-3">
+              <div class="stat-card"><div class="num">17</div><div class="lbl">modules inherited</div></div>
+              <div class="stat-card"><div class="num">5</div><div class="lbl">separate campaigns</div></div>
+              <div class="stat-card"><div class="num">0</div><div class="lbl">knowledge checks</div></div>
             </div>
-            <div class="col-lg my-auto text-center"><i onclick="projectsABB()" role="button" id="projectsIcon" class="fa-solid fa-network-wired fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn" title="ProjectsABB"></i></div>
           </div>
-          <div class="row w-50 mx-auto">
-            <div class="col-lg-8 my-auto  mx-auto" onclick="projects()" role="button">
-              <h3 class="text-center">Projects with Monash Uni and Uni of QLD</h3>
-              <p class="text-center">Major projects I have worked on relating to blended and online learning at Monash University and University of Queensland.</p>
+
+          <div class="beat">
+            <p class="beat-label">What I did</p>
+            <h3 class="beat-title">Built a compliance suite that could prove its own value.</h3>
+            <p class="beat-body">
+              I reviewed every module against the legislation it claimed to address, removing
+              those without a clear regulatory basis. Retained modules were converted to either
+              a question-first approach — resources as PDFs with aligned quizzes — or an
+              adaptive approach where content is only served on topics where staff answer
+              incorrectly. I consolidated five campaigns into one, rewired Workday reporting
+              for clean end-of-year tracking, and ran a full gap analysis for Symbio staff
+              post-acquisition. SME and Risk &amp; Compliance feedback was incorporated
+              iteratively, with quarterly updates to the ELT.
+            </p>
+            <div class="pullquote">
+              <p>"Is there legislation, a standard or ISO requirement for this training? If not, remove the module and make the information accessible via the intranet."</p>
+              <cite>— The filter applied to every module in the review</cite>
             </div>
-            <div class="col-lg my-auto text-center"><i onclick="projects()" role="button" id="projectsIcon" class="fa-solid fa-building-columns fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn" title="Projects"></i></div>
           </div>
-        </div>
-        <hr class="w-50 mx-auto border border-ts opacity-50">
-        <div class="row w-100 mx-auto">
-           <div class="row w-50 mx-auto">
-            <div class="col-lg-8 my-auto mx-auto" onclick="research()" role="button">
-              <h3 class="text-center">Research</h3>
-              <p class="text-center">Read the research I completed during my masters. While it was a digital learning specialisation, I also looked into how to influence the system of teaching and learning in Higher Education.</p>
+
+          <div class="beat">
+            <p class="beat-label">The outcome</p>
+            <h3 class="beat-title">Auditors called it well ahead of industry standard.</h3>
+            <p class="beat-body">
+              Staff reported that their time felt meaningfully spent. Errors and broken links
+              began surfacing through proper feedback channels rather than Slack DMs. External
+              auditors specifically noted the data-driven approach to knowledge assessment —
+              including measurable improvement in recall for safety, security, and ER procedures
+              — as significantly ahead of most businesses they reviewed. Phase 2 is underway:
+              upgraded security awareness training and new DFSV modules aligned to the updated
+              ACMA standard.
+            </p>
+            <div class="stat-grid stat-grid-2">
+              <div class="stat-card"><div class="num">17 → 12</div><div class="lbl">modules after review</div></div>
+              <div class="stat-card"><div class="num">5 → 1</div><div class="lbl">campaigns unified</div></div>
             </div>
-            <div class="col-lg my-auto text-center"><i onclick="research()" role="button" id="researchIcon" class="fa-solid fa-user-graduate fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn" title="Research"></i></div>
           </div>
-          <!--<hr class="w-50 mx-auto border border-ts opacity-50">-->
-          <div class="row w-50 mx-auto">
-            <div class="col-lg-8 my-auto  mx-auto" onclick="sources()" role="button">
-              <h3 class="text-center">Sources</h3>
-              <p class="text-center">What am I reading and listening to to keep in touch with what is important in my career? How did I make this site? Where did I get all these cool icons?</p>
-            </div>
-            <div class="col-lg my-auto text-center"><i onclick="sources()" role="button" id="sourcesIcon" class="fa-solid fa-bookmark fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn" title="Sources"></i></div>
-          </div>
-        </div>
-      <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
-      <div><span id="whoAmI"></span></div>
-      <div>
-        <h1 class="p-2 text-center">Who Am I?</h1>
-        <h3 class="text-center">A teaching and learning fanatic with a flair for UX design</h3>
-        <div class="ratio ratio-16x9 w-50 mx-auto d-block">
-          <iframe src="https://www.youtube.com/embed/AqU5zabfty4?si=2pepRkYErwUtwLAe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <h3 class="text-center mt-2">The Story So Far</h3>
-        <div class="text-center">
-          <p class="d-block mx-auto w-50">0:00 - 0:40 > What do I stand for?</p>
-          <p class="d-block mx-auto w-50">0:41 - 2:30 > What is my work ethic like?</p>
-          <p class="d-block mx-auto w-50">2:31 - 4:02 > What do I do to stay sane?</p>
-          <p class="d-block mx-auto w-50">4:03 - 12:18 > What is my story?</p>
-          <p class="d-block mx-auto w-50">12:19 - 12:42 > Thankyou and Credits</p>
-        </div>
-      <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
-      <div><span id="projectsABB"></span></div>
-      <div>
-        <h1 class="p-2 text-center">Projects with Aussie Broadband</h1>
-        <div class="row">
-          <div class="col-lg" role="button" onclick="abbCompliance()">
-            <h3 class="text-center">Compliance Uplift</h3>
-            <h6 class="text-center">Minimise compliance and make it meaningful and palatable</h6>
-            <p class="text-center"><i class="fa-solid fa-clipboard-list fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
-          </div>
-          <div class="col-lg" role="button" onclick="learningHour()">
-            <h3 class="text-center">Learning Hour with Security Operations</h3>
-            <h6 class="text-center">Protecting time to commit to, complete and track learning for security staff</h6>
-            <p class="text-center"><i class="fa-solid fa-user-clock fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
-          </div>
+
         </div>
       </div>
-      <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
-      <div><span id="abbCompliance"></span></div>
-      <div>
-        <h1 class="p-2 text-center">Projects with Aussie Broadband - Compliance Uplift</h1>
-        <h3 class="text-center">Minimise compliance and make it meaningful and palatable</h3>
-        <div class="accordion" id="accordionAbbCompliance">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading1d"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1d" aria-expanded="true" aria-controls="collapse1d">What was the aim of this project?</button></h2>
-            <div id="collapse1d" class="accordion-collapse collapse show" aria-labelledby="heading1d" data-bs-parent="#accordionAbbCompliance">
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col-lg my-auto">
-                    <p class="mb-0">To ensure any mandatory compliance staff complete at Aussie Broadband:</p>
-                    <ul>
-                      <li><strong>is necessary</strong>. Ask the question and do the research. Is there legislation, a standard or ISO requirement for training? If not, remove the module, and make the information accessible via the staff intranet.</li>
-                      <li><strong>is assessing knowledge</strong>. Too often compliance is reduced to scroll and click. As a result, the business has no idea whether people know what they know. there is no evidence. Ensure there are trackable quizzes and knowledge checks in any learning to ensure we know staff know what they need to know.</li>
-                      <li><strong>is connected to their role</strong>. Yes, everyone needs general knowledge of Work, Health and Safety processes, but not everyone is customer facing, so do they really need to do training related to customer service? Or are there other pieces of training that connect to their role that are more meaningful?</li>
-                      <li><strong>is user friendly</strong>. Instructions on screen and using User Interfaces (UIs) similar to how they use other platforms, not weird links and buttons in places they don't expect, that don't do what they say they will.</li>
-                    </ul>
-                  </div>
-                  <div class="col-lg-3">
-                    <figure><img src="img/gregoire-herve-bazin-needle-thread-unsplash.jpg" alt="Gregoire Herve-Bazin - Aim" class="img-fluid" />
-                      <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/a-close-up-of-a-pair-of-scissors-on-a-wire-e8kqHfB6KLY" title="Gregoire Herve-Bazin - Unsplash" rel="noopener" target="_blank">Gregoire Herve-Bazin</a></figcaption>
-                    </figure>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading3d"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3d" aria-expanded="false" aria-controls="collapse3d">Who were the stakeholders?</button></h2>
-            <div id="collapse3d" class="accordion-collapse collapse" aria-labelledby="heading3d" data-bs-parent="#accordionAbbCompliance">
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col-lg my-auto">
-                    <ul class="mb-0">
-                      <li>Subject Matter Experts (SMEs) from Security, Work Health & Safety, Legal Finance and Customer Service.</li>
-                      <li>Risk and Compliance experts who interpret legislation and standard changes for the business.</li>
-                      <li>Staff from across the business who need to complete the compliance.</li>
-                      <li>Executive team to approve the initial uplift changes, sponsors and subject matter experts who have delegation of authority to approve changes in their relative areas of expertise.</li>
-                    </ul>
-                  </div>
-                <div class="col-lg-3">
-                  <figure>
-                    <img src="img/shelby-murphy-figueroa-organisation-unsplash.jpg" title="Unsplash - Shelby Murphy-Figueroa - Organisation" class="img-fluid" />
-                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/a-group-of-people-standing-in-a-circle-with-their-hands-together-tYq6MoiTR-E?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" target="_blank" title="Unsplash - Shelby Murphy-Figueroa" rel="noopener">Shelby Murphy-Figueroa</a></figcaption>
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
+    </section>
+
+
+    <!-- ── LEARNING HOUR ─────────────────────────────────────── -->
+    <section class="section-block" id="learning-hour">
+      <div class="project-org">Aussie Broadband — Security Operations</div>
+      <h2 class="project-title">Learning Hour with SecOps</h2>
+      <p class="project-summary">
+        Designed a lightweight fortnightly learning system for the Security Operations team —
+        turning ad hoc professional development into a structured, trackable commitment that
+        changed how the team thought about learning at work.
+      </p>
+      <div class="mb-4">
+        <span class="tag">L&amp;D Systems</span>
+        <span class="tag">SharePoint</span>
+        <span class="tag">Agile</span>
+        <span class="tag">Knowledge Management</span>
+        <span class="tag">VIA Strengths</span>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="timeline-spine">
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-dot"></div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading4d">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4d" aria-expanded="true" aria-controls="collapse4d">What was my role in the project?</button>
-          </h2>
-          <div id="collapse4d" class="accordion-collapse collapse" aria-labelledby="heading4d" data-bs-parent="#accordionAbbCompliance">
-            <div class="accordion-body">
-              <div class="row">
-                <div class="col-lg">
-                  <p>My responsibilities were:</p>
-                  <ul class="mb-0">
-                    <li>To review the current compliance suite - 17 modules - for whether they meet regulations they are connected to.</li>
-                    <li>Review the assessable components. Is there sufficient questioning and tracking to prove staff know what we need them to know?</li>
-                    <li>Workday campaign and reporting setup. Are our learning campaigns setup correctly so that reporting is smooth and accurate?</li>
-                    <li>User experience for the learning. Are the instructions clear? Is it easy to get in, complete, and exit the training?</li>
-                    <li>Develop question banks and design content for modules.</li>
-                    <li>Incorporate feedback from SMEs and Risk and Compliance experts as we iterate on training content.</li>
-                    <li>Communicate progress of uplift to the Executive Leadership Team at the end of each quarter.</li>
-                  </ul>
-                </div>
-                <div class="col-lg-3">
-                  <figure>
-                    <img src="img/mapbox-collaboration-unsplash.jpg" title="Unsplash - Map Box" class="img-fluid" />
-                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/four-people-all-on-laptops-two-men-and-two-women-listen-to-person-talking-in-a-board-meeting-ZT5v0puBjZI" target="_blank" title="Collaboration - Map Box" rel="noopener">Map Box</a></figcaption>
-                  </figure>
-                </div>
+        <div class="timeline-beats">
+
+          <div class="beat">
+            <p class="beat-label">The challenge</p>
+            <h3 class="beat-title">Security staff wanted to learn more consistently. They just had no system to hold themselves to it.</h3>
+            <p class="beat-body">
+              After running a VIA Strengths session with the SecOps team, a clear theme emerged:
+              they wanted to be more intentional and accountable about professional development.
+              The desire was there. What was missing was a simple structure — something
+              lightweight enough to fit inside two-week sprints, but rigorous enough to create
+              real commitment and build a useful knowledge base over time.
+            </p>
+          </div>
+
+          <div class="beat">
+            <p class="beat-label">What I did</p>
+            <h3 class="beat-title">Designed a three-phase system built around the team's existing way of working.</h3>
+            <p class="beat-body">
+              Working with the team, I designed a commit–complete–reflect loop aligned to their
+              Agile sprint cadence. At the start of each fortnight, staff made a learning
+              commitment. On completing it, they reflected on what they'd learned. Those
+              reflections fed a growing SharePoint knowledge base — curated lists of recommended
+              learning for analysts, engineers, leaders and aspiring security professionals —
+              drawing from LinkedIn Learning, Microsoft Learn, Grafana, Atlassian and more.
+              I built the SharePoint forms, trained the team, supported staff who weren't sure
+              what to pursue, and handed ownership to the leaders after three months of
+              hypercare.
+            </p>
+            <div class="pullquote">
+              <p>Three phases: Commitment → Completing → Reflection. Simple enough to run inside a sprint. Substantial enough to build something lasting.</p>
             </div>
           </div>
+
+          <div class="beat">
+            <p class="beat-label">The outcome</p>
+            <h3 class="beat-title">A knowledge base that kept growing after I stepped back.</h3>
+            <p class="beat-body">
+              The system runs independently, owned by the team and its leaders. The SharePoint
+              houses a growing curated library of recommendations — useful for existing staff
+              and for anyone looking to move into security and governance. Most importantly,
+              the team's attitude towards professional development shifted: learning stopped
+              being something that happened when absolutely necessary and became a regular,
+              meaningful part of how they work.
+            </p>
+          </div>
+
         </div>
       </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading5d">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5d" aria-expanded="true" aria-controls="collapse5d">What was the result?</button>
-          </h2>
-          <div id="collapse5d" class="accordion-collapse collapse" aria-labelledby="heading5d" data-bs-parent="#accordionAbbCompliance">
-            <div class="accordion-body">
-              <div class="row">
-                <div class="col-lg">
-                  <p>The first phase of upgrades has been complete. These include:</p>
-                  <ul>
-                    <li>Reducing the number of modules from 17 down to 12.</li>
-                    <li>Full gap analysis of Symbio, a wholesale telecommunications company we have acquired to ensure all new staff are compliant.</li>
-                    <li>Changing 6 of the modules to a question-first approach - provide resources as PDFs with aligned quizzes (removing pages of reading and videos that people scrolled past) - or adaptive approach - questions up front, and content provided only on topics where people get questions wrong.</li>
-                    <li>Improving feedback loops for when staff spot minor errors in the questions or content.</li>
-                    <li>Unifying the 5 separated compliance campaigns into a single campaign for the compliance all staff are to complete.</li>
-                    <li>Creating reports in Workday that tracks progress of staff completions for end of Financial Year bonuses across the company.</li>
-                    <li>Official and anecdotal feedback from across the company has been both constructive and positive.</li>
-                    <li>People are helping us spot small errors the content or broken links and using the team's feedback channels setup during Phase 1 instead of using Slack DMs or emails to individual team members.</li>
-                    <li>People are positive about the switch to question based modules. Even where the modules are taking longer than before, they feel like their time is being spent more meaningfully, and instructions are much clearer, meaning people feel more confident with where to click and what to do when in the modules.</li>
-                    <li>Auditors have commented on our approach being far ahead of many other businesses with a focus on data driven assessment of knowledge showing immediate improvement in people's recall for safety and security procedures, as well as how to report on employee relations issues such as sexual assault, harassement and bullying.</li>
-                    <li>Phase 2's focus is on improving Security Training - Security awareness and Case Study analysis of internal breaches and near breaches. And the secondary focus is upgrading our Domestic, Family and Sexual Violence training to match the new standard released by the Australian Communication and Media Authority (ACMA).</li>
-                  </ul>
-                </div>
-                <div class="col-lg-3 my-auto">
-                  <figure>
-                    <img src="img/imagine-buddy-progress-unsplash.jpg" title="Unsplash - Imagine Buddy" class="img-fluid" />
-                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/a-person-placing-a-piece-of-wood-into-a-pyramid-vsLbaIdhwaU" target="_blank" title="Progress - Imagine Buddy" rel="noopener">Imagine Buddy</a></figcaption>
-                  </figure>
-                </div>
-              </div>
+    </section>
+
+
+    <!-- ── UNIVERSITY PROJECTS INTRO ────────────────────────── -->
+    <section class="section-block" id="uni-projects">
+      <p class="project-org">Work</p>
+      <h2 class="project-title">Projects with Monash University &amp; UQ</h2>
+      <p class="project-summary">
+        Earlier in my career I worked as an Educational Designer across the Faculty of Arts
+        at Monash and the Faculty of Medicine at UQ — building tools, designing curriculum,
+        and solving problems that ranged from responsive HTML to automating an entire
+        performance assessment workflow during COVID.
+      </p>
+    </section>
+
+
+    <!-- ── ATS1665 ───────────────────────────────────────────── -->
+    <section class="section-block" id="ats1665">
+      <div class="project-org">Monash University — Faculty of Arts</div>
+      <h2 class="project-title">ATS1665: Understanding Gender 1</h2>
+      <p class="project-summary">
+        Co-designed a first-of-its-kind fully online undergraduate unit during COVID lockdowns
+        — achieving the highest student rating for both a first-time unit coordinator and any
+        Arts Faculty unit delivered entirely online.
+      </p>
+      <div class="mb-4">
+        <span class="tag">Online Learning</span>
+        <span class="tag">Moodle</span>
+        <span class="tag">H5P</span>
+        <span class="tag">Mahara</span>
+        <span class="tag">Assessment Design</span>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="timeline-spine">
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-beats">
+
+          <div class="beat">
+            <p class="beat-label">The challenge</p>
+            <h3 class="beat-title">Design the ideal online unit — and set the template for a new generation of Arts offerings.</h3>
+            <p class="beat-body">
+              When COVID lockdowns hit, the Faculty of Arts faced a hard problem: students
+              couldn't attend face-to-face classes but needed high-quality alternatives. The
+              Associate Dean of Arts directed our team to create a flagship online unit that
+              would demonstrate what excellent online learning in Arts could look like — and
+              serve as a model for others to follow. The unit coordinator, Frankie Egan, was
+              coordinating for the first time. The bar was high and the timeline was tight.
+            </p>
+          </div>
+
+          <div class="beat">
+            <p class="beat-label">What I did</p>
+            <h3 class="beat-title">Built a highly structured, visually rich unit with three levels of depth per week.</h3>
+            <p class="beat-body">
+              I worked closely with Frankie to design the full assessment schedule, teaching
+              content and student communication strategy. Every week of content was built at
+              three levels — basic, intermediate and advanced — giving students genuine choice
+              in how deeply they engaged. The unit ran ten weekly lessons plus live guest
+              lectures and Q&amp;A sessions (extended from two to four guests). I trained
+              Frankie on all educational technology, monitored weekly progress, and documented
+              the process into a reusable template for future units.
+            </p>
+            <div class="stat-grid stat-grid-2">
+              <div class="stat-card"><div class="num">10</div><div class="lbl">weekly lessons</div></div>
+              <div class="stat-card"><div class="num">4</div><div class="lbl">live guest Q&amp;As</div></div>
             </div>
           </div>
+
+          <div class="beat">
+            <p class="beat-label">The outcome</p>
+            <h3 class="beat-title">Highest rating for a first-time coordinator. Highest rating for an online-only Arts unit.</h3>
+            <p class="beat-body">
+              The unit received outstanding student feedback — ranking as the highest-rated unit
+              for a first-time coordinator and the highest-rated fully online unit in the Faculty
+              of Arts. Students responded positively to the layered content approach and the
+              interactive assessment design: four quizzes (top two scores counted), weekly H5P
+              activities, six Mahara blog posts building to a final essay.
+            </p>
+            <div class="d-flex gap-3 flex-wrap mt-2">
+              <a href="https://drive.google.com/file/d/10_aYF8KYOpavbtMsQXFrDjHe58TR7g6B/view?usp=share_link"
+                 target="_blank" rel="noopener"
+                 class="btn btn-outline-secondary btn-sm">
+                <i class="fa-solid fa-ranking-star me-1"></i> Quantitative results
+              </a>
+              <a href="https://drive.google.com/file/d/12XkDCLvF7MS-xLT2MeQenbQnKfcAN3Zr/view?usp=share_link"
+                 target="_blank" rel="noopener"
+                 class="btn btn-outline-secondary btn-sm">
+                <i class="fa-solid fa-people-arrows me-1"></i> Qualitative results
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
+    </section>
+
+
+    <!-- ── BEEST ─────────────────────────────────────────────── -->
+    <section class="section-block" id="beest">
+      <div class="project-org">Monash University — Faculty of Arts / IT</div>
+      <h2 class="project-title">BEEST</h2>
+      <p class="project-summary">
+        Conceived and co-built a tool that let non-technical academics create responsive,
+        Bootstrap-powered HTML elements for Moodle — used by 500+ staff and influential enough
+        that the central teaching and learning unit built their own version into Moodle's
+        backend.
+      </p>
+      <div class="mb-4">
+        <span class="tag">Tool Design</span>
+        <span class="tag">HTML / CSS / JS</span>
+        <span class="tag">Bootstrap</span>
+        <span class="tag">Moodle</span>
+        <span class="tag">UX Research</span>
+        <span class="tag">Google Analytics</span>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="timeline-spine">
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-beats">
+
+          <div class="beat">
+            <p class="beat-label">The challenge</p>
+            <h3 class="beat-title">Academics could build content. They couldn't make it look good or work on mobile.</h3>
+            <p class="beat-body">
+              Moodle's default content tools produced static, desktop-only pages. Creating
+              responsive, visually engaging elements required HTML skills most academics didn't
+              have — and weren't going to learn. The result was a platform full of content that
+              was hard to read, broken on mobile, and inconsistent in quality. Educational
+              Designers spent significant time either building elements from scratch or trying
+              to teach HTML to people who didn't want to learn it.
+            </p>
+          </div>
+
+          <div class="beat">
+            <p class="beat-label">What I did</p>
+            <h3 class="beat-title">Built the first element, then convinced two expert designers it was worth building the rest.</h3>
+            <p class="beat-body">
+              I built a basic button creator using my then-limited HTML, CSS and JavaScript
+              knowledge — enough to demonstrate the concept. I used it to convince Matt Chen
+              and Philip Abramson in the IT Faculty (a former front-end designer and a former
+              back-end CMS expert) that the idea was worth their time. From there I led the
+              UX: iterating the interface through multiple rounds of feedback, proposing the
+              save-and-reuse feature, running four focus groups across Educational Designers,
+              academics, students and senior T&amp;L staff, recording all screencasts, writing
+              all user guides, and setting up Google Analytics to track adoption.
+            </p>
+            <div class="pullquote">
+              <p>First public semester: used over 1,000 times. Only 4 support inquiries. Only 6 instances of misuse found across 50 audited sites.</p>
+              <cite>— Google Analytics audit</cite>
+            </div>
+          </div>
+
+          <div class="beat">
+            <p class="beat-label">The outcome</p>
+            <h3 class="beat-title">500+ users. And the central unit built their own version because of it.</h3>
+            <p class="beat-body">
+              BEEST is still in active use by over 500 academics and professional staff across
+              Monash. Every element it produces is fully responsive across desktop, tablet and
+              mobile. Storage is handled entirely in the browser's local storage — no server
+              costs, up to 10,000 items per user. The central teaching and learning unit saw
+              the adoption figures and the self-sufficiency of users, and built a native version
+              directly into Moodle's backend — the clearest possible validation that the concept
+              worked.
+            </p>
+            <a href="https://beest.monash.edu" target="_blank" rel="noopener"
+               class="btn btn-outline-secondary btn-sm mt-1">
+              <i class="fa-solid fa-dragon me-1"></i> View BEEST
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── MD DESIGN ─────────────────────────────────────────── -->
+    <section class="section-block" id="md-design">
+      <div class="project-org">University of Queensland — Faculty of Medicine</div>
+      <h2 class="project-title">MD Design Project</h2>
+      <p class="project-summary">
+        Part of a team redesigning UQ's postgraduate medicine program from 32 individual
+        courses into four integrated year-long programs — closing the gap between
+        compartmentalised knowledge and the holistic clinical thinking real doctors need.
+      </p>
+      <div class="mb-4">
+        <span class="tag">Curriculum Design</span>
+        <span class="tag">Assessment Design</span>
+        <span class="tag">Higher Education</span>
+        <span class="tag">Bootstrap</span>
+        <span class="tag">LearnX</span>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="timeline-spine">
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-beats">
+
+          <div class="beat">
+            <p class="beat-label">The challenge</p>
+            <h3 class="beat-title">Students were learning in silos. Doctors don't work in silos.</h3>
+            <p class="beat-body">
+              Doctors in the field and current students raised a consistent concern: the
+              existing 32-course structure produced graduates who could recall knowledge by
+              subject but struggled to apply it holistically in clinical situations. UQ's
+              Faculty of Medicine responded with an ambitious redesign — compressing the
+              program into four integrated year-long courses, combining the themes, content
+              and assessment of eight 12-week courses into each 32-week course.
+            </p>
+          </div>
+
+          <div class="beat">
+            <p class="beat-label">What I did</p>
+            <h3 class="beat-title">Led learning design across five program streams, and brought responsive design to UQ's platform.</h3>
+            <p class="beat-body">
+              I worked across the Assessment Working Group and five content streams: Clinical
+              and Practical Skills, Advocacy and Public Health, Ethics and Law, and Rural and
+              Remote Medicine. Alongside the curriculum work, I applied what I'd built at
+              Monash with BEEST to UQ's LearnX platform — designing the MEDI7100 Code Centre,
+              a custom web application that added Bootstrap, Font Awesome and custom CSS to
+              the platform, enabling fully responsive course content across devices. I also
+              began developing professional development for academic and professional staff
+              so they could build to the same standard without needing to code.
+            </p>
+            <a href="medi7100codecentre.html" target="_blank" rel="noopener"
+               class="btn btn-outline-secondary btn-sm mt-1">
+              <i class="fa-solid fa-code me-1"></i> MEDI7100 Code Centre
+            </a>
+          </div>
+
+          <div class="beat">
+            <p class="beat-label">The outcome</p>
+            <h3 class="beat-title">Scepticism turned to engagement. Students are actively shaping their own program.</h3>
+            <p class="beat-body">
+              Initial resistance from academics and student representatives — concerns about
+              chaos and compromised standards — gave way to acceptance and then genuine
+              enthusiasm after 18 months of planning and 10 weeks of delivery. The project
+              team's close feedback loop with students meant content and assessment issues
+              were resolved in hours rather than weeks. Students saw their feedback acted on
+              and kept contributing. The voices calling for a return to the old model went
+              quiet.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── MUSIC PERFORMANCE ─────────────────────────────────── -->
+    <section class="section-block" id="music-perf">
+      <div class="project-org">Monash University — Faculty of Arts / IT</div>
+      <h2 class="project-title">Music performance in the pandemic</h2>
+      <p class="project-summary">
+        Co-built a fully automated Google Suite system that kept music and theatre performance
+        assessment running through COVID lockdowns — preventing course cancellations, protecting
+        casual staff jobs, and creating a reusable process for future disruptions.
+      </p>
+      <div class="mb-4">
+        <span class="tag">Automation</span>
+        <span class="tag">Google Apps Script</span>
+        <span class="tag">Process Design</span>
+        <span class="tag">Google Suite</span>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="timeline-spine">
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-beats">
+
+          <div class="beat">
+            <p class="beat-label">The challenge</p>
+            <h3 class="beat-title">Music students can't perform in a band remotely. Or so everyone assumed.</h3>
+            <p class="beat-body">
+              When Monash sent everyone home, music and drama courses faced a unique crisis.
+              Assessment depended on live performance — students forming bands, playing
+              together, being watched and marked in real time. With no ability to share
+              physical space, the question was existential: could these courses continue at
+              all? The answer couldn't just be "move to Zoom" — it needed to handle
+              submissions, marker assignment, permissions management and feedback distribution
+              at scale, across six performance units and around 200 students.
+            </p>
+          </div>
+
+          <div class="beat">
+            <p class="beat-label">What I did</p>
+            <h3 class="beat-title">Wireframed the entire process, then automated it end-to-end with Google Apps Script.</h3>
+            <p class="beat-body">
+              I designed the full online assessment workflow — from repertoire submission
+              through to marks delivery — and presented it to the Associate Dean for Education,
+              Dean of the Music School and leader of Teaching Support before a line of code
+              was written. Working with Matt Chen from the IT Faculty, we used Google Forms,
+              Drive and Apps Script to automate the entire pipeline: students submitted
+              repertoire; Drive auto-created folders per student and piece; students received
+              upload links; on the submission deadline, marker permissions were automatically
+              injected into the correct folders; markers received briefing documents; after
+              marking closed, students received links to their marks and feedback. Manual
+              overrides were available for extensions at every stage.
+            </p>
+          </div>
+
+          <div class="beat">
+            <p class="beat-label">The outcome</p>
+            <h3 class="beat-title">Courses ran. Jobs were protected. Two people did the work of a whole team.</h3>
+            <p class="beat-body">
+              Courses continued without delay. Casual and contract staff kept their jobs. All
+              stakeholders gained new skills in recording and performing collaboratively online.
+              The Faculty gained a reusable, largely automated process for any future disruption
+              to live performance. Quantitative student feedback was slightly down from
+              pre-pandemic years — expected given the circumstances — but qualitative feedback
+              was overwhelmingly grateful. Staff were astonished that two people had automated
+              what should have required a dedicated team. As a musician myself, this is one
+              I'm particularly proud of.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── RESEARCH INTRO ────────────────────────────────────── -->
+    <section class="section-block" id="research">
+      <p class="project-org">Masters research</p>
+      <h2 class="project-title">Research</h2>
+      <p class="project-summary">
+        Both papers were completed as part of my Master of Education (Digital Learning
+        Specialisation) at Monash, awarded with the Dean's Award for Academic Excellence.
+      </p>
+    </section>
+
+
+    <!-- ── RESEARCH: QUALITY T&R ─────────────────────────────── -->
+    <section class="section-block" id="research-quality">
+      <div class="project-org">Monash University — Master of Education</div>
+      <h2 class="project-title">Building a quality balance in teaching and research</h2>
+      <p class="project-summary">
+        Explored why Australian higher education consistently prioritises research over
+        teaching quality — and what a rigorous external ranking system for teaching could
+        look like if universities chose to build one.
+      </p>
+      <p style="font-size:0.95rem;color:#495057;line-height:1.8;max-width:640px;margin-bottom:1.25rem">
+        Higher education in Australia has a research ranking problem — not because ranking
+        systems are wrong, but because only research has one. This paper traces the history
+        that led to the current imbalance, examines what makes research rankings credible,
+        and argues that a similarly rigorous independent framework for teaching and learning
+        quality is both achievable and overdue. The main limitation: financial reporting in
+        higher education makes it very hard to isolate what is actually being spent on
+        teaching versus research.
+      </p>
+      <a href="https://drive.google.com/file/d/1921yQDK0C5D0jhsiRLEBffwUpIPAZDB3/view?usp=sharing"
+         target="_blank" rel="noopener"
+         class="btn btn-outline-secondary btn-sm">
+        <i class="fa-solid fa-scale-balanced me-1"></i> Download the full paper
+      </a>
+    </section>
+
+
+    <!-- ── RESEARCH: LEARNING IN ACTION ─────────────────────── -->
+    <section class="section-block" id="research-learning">
+      <div class="project-org">Monash University — Master of Education</div>
+      <h2 class="project-title">Experience and reflection: learning in action</h2>
+      <p class="project-summary">
+        Examined how experiential learning and community service learning models could be
+        applied to improve outcomes for international students in Australia — specifically
+        around language acquisition and workplace exploitation.
+      </p>
+      <p style="font-size:0.95rem;color:#495057;line-height:1.8;max-width:640px;margin-bottom:1.25rem">
+        International students in Australia face two compounding problems: language development
+        stalls after enrolment due to competing pressures, and unfamiliarity with Australian
+        systems leaves many vulnerable to workplace exploitation. This paper proposes a
+        mentoring and language exchange program — pairing new international students with
+        those two or more years into their stay — as a practical, low-cost intervention that
+        addresses both.
+      </p>
+      <a href="https://drive.google.com/open?id=1zw1XKvKWwP8Lm__r7WKzhxdoyRuzN2Hm"
+         target="_blank" rel="noopener"
+         class="btn btn-outline-secondary btn-sm">
+        <i class="fa-solid fa-bolt me-1"></i> Download the full paper
+      </a>
+    </section>
+
+
+    <!-- ── CONTACT ───────────────────────────────────────────── -->
+    <section class="section-block" id="contact">
+      <p class="project-org">Get in touch</p>
+      <h2 class="project-title">Contact me</h2>
+      <p class="project-summary">
+        Want to talk design, education, or give feedback on any of the work here?
+      </p>
+      <div class="row align-items-center g-4" style="max-width:600px">
+        <div class="col-sm">
+          <p class="mb-2">
+            <i class="fa-brands fa-linkedin text-ts me-2"></i>
+            <a href="https://www.linkedin.com/in/tim-scholl/"
+               target="_blank" rel="noopener" class="contact-link">
+              LinkedIn — Tim Scholl
+            </a>
+          </p>
+          <p class="mb-0">
+            <i class="fa-solid fa-inbox text-ts me-2"></i>
+            <span id="emailAddr">t.scholl87@gmail.com</span>
+            <button id="copyEmailBtn"
+                    class="btn btn-outline-secondary btn-sm ms-2"
+                    onclick="copyEmail()" style="font-size:0.7rem;padding:2px 8px">
+              Copy email
+            </button>
+          </p>
+        </div>
+        <div class="col-sm-auto">
+          <img src="img/TimSchollProfilePic3.jpeg"
+               alt="Tim Scholl"
+               class="rounded-circle"
+               style="width:80px;height:80px;object-fit:cover;border:3px solid #004A5E">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── SOURCES ───────────────────────────────────────────── -->
+    <section class="section-block" id="sources">
+      <p class="project-org">Reading &amp; listening</p>
+      <h2 class="project-title">Sources</h2>
+      <p class="project-summary mb-4">
+        What I read, listen to, and build with.
+      </p>
+
+      <div class="row g-3 mb-5">
+
+        <div class="col-md-4">
+          <div class="source-card">
+            <p class="source-type">UX — Website &amp; Podcast</p>
+            <h4>Nielsen Norman Group</h4>
+            <p>The first place I go for UX answers — from beginner concepts through to complex
+            research. Their podcast puts practitioners in conversation with experts who walk
+            the talk.</p>
+            <a href="https://www.nngroup.com/" target="_blank" rel="noopener">nngroup.com</a>
+            &nbsp;·&nbsp;
+            <a href="https://podcasters.spotify.com/pod/show/nngroup" target="_blank" rel="noopener">Podcast</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="source-card">
+            <p class="source-type">Business &amp; Leadership — Podcast</p>
+            <h4>Diary of a CEO</h4>
+            <p>Steven Bartlett's long-form interviews consistently produce the most useful
+            thinking on leadership, communication, and product. Favourites: Simon Sinek,
+            Johann Hari, Julian Treasure, Dr Tali Sharot.</p>
+            <a href="https://stevenbartlett.com/the-diary-of-a-ceo-podcast/" target="_blank" rel="noopener">Podcast page</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="source-card">
+            <p class="source-type">Education Research — Website &amp; Podcast</p>
+            <h4>Michael Henderson</h4>
+            <p>Michael Henderson and Michael Phillips at Monash never stop wanting to reflect
+            and improve. Their work on feedback for learning is directly applicable to
+            everything I do. Neil Selwyn's podcast from the same group is short, sharp,
+            and worth every minute.</p>
+            <a href="https://feedbackforlearning.org/" target="_blank" rel="noopener">feedbackforlearning.org</a>
+            &nbsp;·&nbsp;
+            <a href="https://podcasts.apple.com/au/podcast/meet-the-education-researcher/id1230763892" target="_blank" rel="noopener">Podcast</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Built with -->
+      <h3 style="font-size:1.1rem;margin-bottom:1rem">What I used to build this site</h3>
+      <div class="row g-3">
+
+        <div class="col-md-4">
+          <div class="source-card">
+            <p class="source-type">Hosting</p>
+            <h4><i class="fa-brands fa-github me-1"></i> GitHub Pages</h4>
+            <p>Free public hosting for static sites. All the code is open — that's the point.
+            Collaborating, iterating, and building on what others have made.</p>
+            <a href="https://pages.github.com/" target="_blank" rel="noopener">pages.github.com</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="source-card">
+            <p class="source-type">CSS Framework</p>
+            <h4><i class="fa-brands fa-bootstrap me-1"></i> Bootstrap 5.2</h4>
+            <p>The most widely used design library on the internet. Used to style and structure
+            this site, BEEST, the Code Centre, and countless other projects.</p>
+            <a href="https://getbootstrap.com/docs/5.2/" target="_blank" rel="noopener">getbootstrap.com</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="source-card">
+            <p class="source-type">Icon Library</p>
+            <h4><i class="fa-solid fa-font-awesome me-1"></i> Font Awesome 6</h4>
+            <p>The most widely used icon library on the internet. The free version alone gives
+            over 2,000 icons. It's the reason the <code>&lt;i&gt;</code> element became the
+            standard for icons rather than italics.</p>
+            <a href="https://fontawesome.com/search?o=r&m=free" target="_blank" rel="noopener">fontawesome.com</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+  </main><!-- /main -->
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer mt-5">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <span>
+        Built with
+        <a href="https://getbootstrap.com/docs/5.2/" target="_blank" rel="noopener">Bootstrap v5.2</a>
+        &amp;
+        <a href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome v6</a>
+        — Tim Scholl
+      </span>
+      <span>Last updated March 2026</span>
     </div>
-  <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
-  <div><span id="learningHour"></span></div>
-      <div>
-        <h1 class="p-2 text-center">Projects with Aussie Broadband - Learning Hour</h1>
-        <h3 class="text-center">Protecting time to commit to, complete and track learning for security staff</h3>
-        <div class="accordion" id="accordionLearningHour">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading1e"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1e" aria-expanded="true" aria-controls="collapse1e">What was the aim of this project?</button></h2>
-            <div id="collapse1e" class="accordion-collapse collapse show" aria-labelledby="heading1e" data-bs-parent="#accordionLearningHour">
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col-lg my-auto">
-                    <p class="mb-0">After running a Values in Action (VIA) Strengths session with the Security Operations team, they decided they wanted to be more consistent and strict on themselves with how they do learning and development. So I created a simple system for them that did the following:</p>
-                    <ul>
-                      <li>Made them make a learning commitment at the start of their sprints which are a fortnight long each. If you're not familiar with what sprints are, they are part of a way of working called Agile. Check out more about <a href="https://www.atlassian.com/agile" target="_blank" title="Atlassian - What is Agile?" rel="noopener">the Agile way of working here</a>.</li>
-                      <li>Built a process flow chart with the team of how this would work. Going through 3 phases - Commitment, Completing, Reflection.</li>
-                      <li>Developed a one-stop-shop within their SharePoint where they filled out forms detailing their learning commitment and reflections.</li>
-                      <li>Used reflections to build multiple lists including recommended learning (and learning to avoid) for all staff, for leaders and for people aspiring to be security experts within our various platforms for learning including LinkedIn Learning, Microsoft Learn, Grafana and Atlassian amongst others.</li>
-                      <li>Supported staff when they weren't sure what learning to commit to. Figuring out what they were looking for and seeking it out either within the business, or possible external options for them to consider.</li>
-                    </ul>
-                  </div>
-                  <div class="col-lg-3">
-                    <figure><img src="img/airfocus-one-on-one-unsplash.jpg" alt="Air Focus - One on One" class="img-fluid" />
-                      <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/man-in-red-and-black-crew-neck-t-shirt-using-silver-macbook-wrdvOKfgzRo" title="Air Focus - Unsplash" rel="noopener" target="_blank">Air Focus</a></figcaption>
-                    </figure>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading3e"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3e" aria-expanded="false" aria-controls="collapse3e">Who were the stakeholders?</button></h2>
-            <div id="collapse3e" class="accordion-collapse collapse" aria-labelledby="heading3e" data-bs-parent="#accordionLearningHour">
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col-lg my-auto">
-                    <ul class="mb-0">
-                      <li>Security GM + Senior Leaders in Governance and Security Operations</li>
-                      <li>Security Analysts and Engineers from both Aussie Broadband and Symbio</li>
-                    </ul>
-                  </div>
-                <div class="col-lg-3">
-                  <figure>
-                    <img src="img/small-group-network-workshop-unsplash.jpg" title="Unsplash - Small Group Network - Workshop" class="img-fluid" />
-                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/a-group-of-people-sitting-at-a-table-6jzYgQYPIEw" target="_blank" title="Unsplash - Small Group Network" rel="noopener">Small Group Network</a></figcaption>
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading4e">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4e" aria-expanded="true" aria-controls="collapse4e">What was my role in the project?</button>
-          </h2>
-          <div id="collapse4e" class="accordion-collapse collapse" aria-labelledby="heading4e" data-bs-parent="#accordionLearningHour">
-            <div class="accordion-body">
-              <div class="row">
-                <div class="col-lg">
-                  <p>My responsibilities were:</p>
-                  <ul class="mb-0">
-                    <li>To explore our systems and options for the learning hour process.</li>
-                    <li>Design the system and keep it as simple as possible.</li>
-                    <li>Get commitment from the leaders to start and continue this system after 3 months of hypercare from our Capability and People Experience (CAPE) Team.</li>
-                    <li>Create the SharePoint site and forms for the team to use.</li>
-                    <li>Train the team on how to use the system.</li>
-                    <li>Iterate on the system based on feedback from the team.</li>
-                    <li>Encourage reflection and sharing of learning to build a knowledge base for the team.</li>
-                    <li>Support the team in finding learning that is relevant to their roles and career aspirations.</li>
-                  </ul>
-                </div>
-                <div class="col-lg-3">
-                  <figure>
-                    <img src="img/mapbox-collaboration-unsplash.jpg" title="Unsplash - Map Box" class="img-fluid" />
-                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/four-people-all-on-laptops-two-men-and-two-women-listen-to-person-talking-in-a-board-meeting-ZT5v0puBjZI" target="_blank" title="Collaboration - Map Box" rel="noopener">Map Box</a></figcaption>
-                  </figure>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading5e">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5e" aria-expanded="true" aria-controls="collapse5e">What was the result?</button>
-          </h2>
-          <div id="collapse5e" class="accordion-collapse collapse" aria-labelledby="heading5e" data-bs-parent="#accordionLearningHour">
-            <div class="accordion-body">
-              <div class="row">
-                <div class="col-lg">
-                  <p>The first phase of upgrades has been complete. These include:</p>
-                  <ul>
-                    <li>A simple, easy to use system that the team can use to commit to, complete and reflect on their learning each sprint.</li>
-                    <li>A SharePoint site that houses all the forms and resources the team needs to use the learning hour system.</li>
-                    <li>A growing knowledge base of recommended learning for the team, based on their reflections and experiences.</li>
-                    <li>A database of learning recommendations suitable for other people within the company or people looking to take up a role in security and governance.</li>
-                    <li>Positive feedback from the team and leaders about the system and its impact on their learning and development.</li>
-                    <li>Changed attitudes towards learning in a professional capacity. It can be meaningful, not just 'part of the job when necessary'.</li>
-                  </ul>
-                </div>
-                <div class="col-lg-3 my-auto">
-                  <figure>
-                    <img src="img/guerrillabuzz-system-unsplash.jpg" title="Unsplash - Guerrilla Buzz" class="img-fluid" />
-                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/diagram-7hA2wqBcSF8" target="_blank" title="System - Guerrilla Buzz" rel="noopener">Guerrilla Buzz</a></figcaption>
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
-      <div><span id="projects"></span></div>
-      <div>
-        <h1 class="p-2 text-center">Projects During My Time With Monash + UQ</h1>
-        <div class="row">
-          <div class="col-lg" role="button" onclick="ats1665()">
-            <h3 class="text-center">ATS1665: Understanding Gender 1</h3>
-            <h6 class="text-center">Make the highest quality online undergraduate unit possible</h6>
-            <p class="text-center"><i class="fa-solid fa-venus-mars fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
-          </div>
-          <div class="col-lg" role="button" onclick="beest()">
-            <h3 class="text-center">BEEST</h3>
-            <h6 class="text-center">Simplifying advanced HTML element design for Moodle</h6>
-            <p class="text-center"><i class="fa-solid fa-dragon fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
-          </div>
-        </div>
-        <hr class="w-50 mx-auto border border-ts opacity-50">
-        <div class="row">
-          <div class="col-lg" role="button" onclick="mdDesign()">
-            <h3 class="text-center">MD Design</h3>
-            <h6 class="text-center">Transforming how future doctors study</h6>
-            <p class="text-center"><i class="fa-solid fa-user-doctor fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
-          </div>
-          <div class="col-lg" role="button" onclick="musicSubmission()">
-            <h3 class="text-center">Music Performance in the Pandemic</h3>
-            <h6 class="text-center">Automating Google Drive for the good of music</h6>
-            <p class="text-center"><i class="fa-solid fa-music fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
-          </div>
-        </div>     
-      </div>  
-    <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
-      <div><span id="ats1665"></span></div>
-      <div>
-        <h1 class="p-2 text-center">Project: ATS1665 - Understanding Gender 1</h1>
-        <h3 class="text-center">Make the highest quality online undergraduate unit possible</h3>
-        <div class="accordion" id="accordionATS1665">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading1"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">What was the aim of this project?</button></h2>
-            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionATS1665">
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col-lg my-auto">
-                    <p class="mb-0">This unit was a first of its kind in the Faculty of Arts. The academic Frankie Egan, coordinating a unit for the first time, and I were given the challenge to <strong>design the ideal online learning unit that will set the example for a new generation of online offerings</strong> as a directive from the Associate Dean of Arts. This was in response to the lockdowns at the start of the pandemic where many students were forced to miss out on units that required face-to-face teaching; this unit would be one of the many alternatives offered in Arts.</p>
-                  </div>
-                  <div class="col-lg-3">
-                    <figure><img src="img/annie-spratt-target.jpeg" alt="Annie Spratt - Target" class="img-fluid" />
-                      <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/jY9mXvA15W0" title="Annie Spratt - Unsplash" target="_blank" rel="noopener">Annie Spratt</a></figcaption>
-                    </figure>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading3"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Who were the stakeholders?</button></h2>
-            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionATS1665">
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col-lg my-auto">
-                    <ul class="mb-0">
-                      <li>Faculty of Arts senior academics</li>
-                      <li>Frankie Egan - Unit Coordinator</li>
-                      <li>Educational Design Team</li>
-                      <li>Teaching Support Team</li>
-                      <li>Students enrolling in the unit</li>
-                    </ul>
-                  </div>
-                <div class="col-lg-3">
-                  <figure>
-                    <img src="img/hannah-busing-team.jpeg" title="Unsplash - Hannah Busing Team" class="img-fluid" />
-                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/Zyx1bK9mqmA" target="_blank" title="Unsplash - Hannah Busing Team" rel="noopener">Hannah Busing</a></figcaption>
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading4">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">What was my role in the project?</button>
-          </h2>
-          <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionATS1665">
-            <div class="accordion-body">
-              <div class="row">
-                <div class="col-lg">
-                  <p>My responsibilities were:</p>
-                  <ul class="mb-0">
-                    <li>To collaborate with Frankie on an assessment schedule, the teaching and learning content and a communication strategy for the unit</li>
-                    <li>Train Frankie on any educational technology required for the project</li>
-                    <li>Report time taken at various stages of the project</li>
-                    <li>Review the project once complete and build out a template and guides for how we achieved what we did</li>
-                    <li>Monitor weekly progress and update content in the unit site as requested by Frankie</li>
-                  </ul>
-                </div>
-                <div class="col-lg-3">
-                  <figure>
-                    <img src="img/moritz-kindler-network.jpeg" title="Unsplash - Moritz Kindler" class="img-fluid" />
-                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/G66K_ERZRhM" target="_blank" title="Network - Moritz Kindler" rel="noopener">Moritz Kindler</a></figcaption>
-                  </figure>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading5">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">What was the result?</button>
-          </h2>
-          <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionATS1665">
-            <div class="accordion-body">
-              <div class="row">
-                <div class="col-lg">
-                  <p>Assessment:</p>
-                  <ul>
-                    <li>4 quizzes (1 every 3 weeks) - take top 2 results - 20%</li>
-                    <li>Completion of weekly Moodle lessons - H5P tasks + activity completion log - 10%</li>
-                    <li>6 blog posts (250 words each) on Mahara - 30%</li>
-                    <li>1 essay (1500-2000 words) based on chosen blog post - 40%</li>
-                  </ul>
-                  <p>Learning content:</p>
-                  <ul>
-                    <li>10 weekly lessons + 2 live guest lectures/Q+A (extended to 4 guests)</li>
-                    <li>Highly visual content with videos of lectures, TED Talks, and interviews</li>
-                    <li>Weekly content had basic, intermediate, and advanced levels to choose from</li>
-                  </ul>
-                  <p>Results:</p>
-                  <ul>
-                    <li>Highly interactive and bespoke approach</li>
-                    <li>Highest rating for a first-time unit coordinator and highest rating for an Arts Faculty unit delivered solely online</li>
-                    <li>Positive response from students with some suggestions for improvement</li>
-                  </ul>
-                </div>
-                <div class="col-lg-3 my-auto">
-                  <figure>
-                    <img src="img/stephen-dawson-statistics.jpeg" title="Unsplash - Stephen Dawson" class="img-fluid" />
-                    <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/qwtCeJ5cLYs" target="_blank" title="Statistics - Stephen Dawson" rel="noopener">Stephen Dawson</a></figcaption>
-                  </figure>
-                </div>
-              </div>
-              <div class="row w-75 mx-auto">
-                <div class="col-lg text-center"><a class="text-decoration-none text-ts" title="ATS1665 Quantitative Results" href="https://drive.google.com/file/d/10_aYF8KYOpavbtMsQXFrDjHe58TR7g6B/view?usp=share_link" target="_blank" rel="noopener">
-                    <figure><i role="button" id="projectsIcon" class="fa-solid fa-ranking-star fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn" title="ATS1665 Quantitative Results"></i>
-                      <figcaption class="mt-2">
-                        <h6>ATS1665 Quantitative Results</h6>
-                      </figcaption>
-                    </figure>
-                  </a>
-                </div>
-                <div class="col-lg text-center"><a class="text-decoration-none text-ts" title="ATS1665 Qualitative Results" href="https://drive.google.com/file/d/12XkDCLvF7MS-xLT2MeQenbQnKfcAN3Zr/view?usp=share_link" target="_blank" rel="noopener">
-                  <figure>
-                    <i role="button" id="projectsIcon" class="fa-solid fa-people-arrows fa-7x text-ts border border-ts border-3 rounded p-2 iconBtn" title="ATS1665 Qualitative Results"></i>
-                    <figcaption class="mt-2">
-                      <h6>ATS1665 Qualitative Results</h6>
-                    </figcaption>
-                  </figure>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
-  <div><span id="beest"></span></div>
-  <div>
-    <h1 class="p-2 text-center">Project: BEEST</h1>
-    <h3 class="text-center">Simplifying advanced HTML element design</h3>
-    <div class="accordion" id="accordionBEEST">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading1b"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1b" aria-expanded="true" aria-controls="collapse1b">What was the aim of this project?</button></h2>
-        <div id="collapse1b" class="accordion-collapse collapse show" aria-labelledby="heading1b" data-bs-parent="#accordionBEEST">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg my-auto">
-                <p class="mb-0">BEEST stands for <strong>B</strong>ootstrap <strong>E</strong>nhanced <strong>E</strong>lements <strong>S</strong>treamlining <strong>T</strong>ool. BEEST takes your basic input of text, links and choices and combines it with pre-written HTML to generate advanced HTML elements for Moodle without the need for complex HTML skills. <a href="https://beest.monash.edu" target="_blank" title="Monash BEEST" rel="noopener">Take a look at the current state of the project here</a>.</p>
-              </div>
-              <div class="col-lg-3">
-                <figure>
-                  <img src="img/joe-gardner-aim.jpeg" title="Unsplash - Joe Gardner" class="img-fluid" />
-                  <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/86T4OpohLTI" target="_blank" title="Statistics - Joe Gardner" rel="noopener">Joe Gardner</a></figcaption>
-                </figure>
-              </div>
-          </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading2b">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2b" aria-expanded="true" aria-controls="collapse2b">Who were the stakeholders?</button></h2>
-        <div id="collapse2b" class="accordion-collapse collapse" aria-labelledby="heading2b" data-bs-parent="#accordionBEEST">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg my-auto">
-                <ul class="mb-0">
-                  <li>Academics building course content</li>
-                  <li>Senior academics in the Faculty of Arts seeking ways to improve learning</li>
-                  <li>The Education Design teams in both Arts and IT</li>
-                  <li>Students</li>
-                  <li>Teaching Support in the Faculty of Arts</li>
-                </ul>
-              </div>
-              <div class="col-lg-3">
-                <figure>
-                  <img src="img/jason-goodman-meeting.jpeg" title="Unsplash - Jason Goodman" class="img-fluid" />
-                  <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/vbxyFxlgpjM" target="_blank" title="Statistics - Jason Goodman" rel="noopener">Jason Goodman</a></figcaption>
-                </figure>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading3b">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3b" aria-expanded="true" aria-controls="collapse3b">What was the my role in the project?</button></h2>
-        <div id="collapse3b" class="accordion-collapse collapse" aria-labelledby="heading3b" data-bs-parent="#accordionBEEST">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg">
-                <p>I designed the very first element creator - the button builder - with my limited knowledge of HTML, CSS and Javascript. I used this basic example to show two Educational Designers in the IT Faculty - Matt Chen and Philip Abramson - in IT with exceptional Educational Design, User Experience and coding skills - Matt a former front end web designer, Phil a former back end CMS expert - and convince them it was a worthwhile prospect building all the other elements you see on the BEEST.</p>
-                <p>From here Matt and Phil built out the functionality, storage and hosting of the site, and I worked on the following:</p>
-                <ul class="mb-0">
-                  <li>Researching and implementing the user interface (UI) of the BEEST. I built and iterated the interface several times as I gained user feedback and research how people like to use applications like this.</li>
-                  <li>I came up with the idea for naming and storing items for reuse, and Phil made this happen while also teaching me how to access local storage in the browser.</li>
-                  <li>I worked with Matt to streamline the functionality so the BEEST works quicker with the user, learning about extraction of functionality and more advanced Javascript principles.</li>
-                  <li>I recorded all the walkthrough screencasts and wrote all the user guides.</li>
-                  <li>I coordinated 4 focus groups - other Educational Designers, Academics from Arts, Students and Senior Teaching and Learning staff - to gain and incorporate their feedback into the product. In the process winning many senior staff over that we can trust staff with working with code, that the product is self-sufficient.</li>
-                  <li>Setup the Google Analytics to track use of the product. This was instrumental in proving self sufficiency. We audited 50 sites that used the BEEST in it's first semester of being public, the site was used in excess of 1000 times with only 4 inquiries for support, and only 6 instances where we found content from the BEEST that was used inappropriately - e.g. an accordion inside of another accordion.</li>
-                </ul>
-              </div>
-              <div class="col-lg-3 my-auto">
-                <figure>
-                  <img src="img\alvaro-reyes-wireframe.jpg" title="Unsplash - Alvaro Reyes Wireframe" class="img-fluid" />
-                  <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/qWwpHwip31M" target="_blank" title="Unsplash - Alvaro Reyes Wireframe" rel="noopener">Alvaro Reyes</a></figcaption>
-                </figure>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading4b">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4b" aria-expanded="true" aria-controls="collapse4b">What was the result?</button>
-        </h2>
-        <div id="collapse4b" class="accordion-collapse collapse" aria-labelledby="heading4b" data-bs-parent="#accordionBEEST">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg">
-                <p>Over 500 academics and professional staff across the university still use BEEST. But the real win here is that the central teaching and learning unit saw how useful BEEST was, and how many people were using it, and using it well without requiring the levels of support they expected. They decided to create their own tool, based off the BEEST that was built in to Moodle's backend rather than continuing to put BEEST in on the front end.</p>
-                <p>The BEEST solved many problems in learning design to improve learning and user experience:</p>
-                <ul class="mb-0">
-                  <li>The big one in our eyes. All content built with the BEEST is responsive across devices. Students can now use Moodle with confidence on laptop/desktop, tablets and mobile.</li>
-                  <li>It cuts out the need for staff to learn complex HTML to build complex HTML elements.</li>
-                  <li>It harnesses in built Bootstrap and Font Awesome library in Moodle to create these elements. It only adds extra CSS for Accordions and Tabbed content to ensure it works correctly in Moodle. All other elements require no additional external CSS or Javascript to operate.</li>
-                  <li>Elements can be saved and revisited and updated. Making elements reusable is another user efficiency we were able to make happen using the browser's local storage capacity. Each item is around 1-4kb of memory and most browsers allow 10MB of local storage per site. Meaning we can store between 2500-10000 BEEST items per user in their browser and not pay for server space.</li>
-                  <li>It allows us as Educational Designers to speak more to a user experience perspective of learning. Asking questions like 'is how you have formatted this really allowing to student to get the best out of their time?' This is what learning online is missing in many cases where it goes wrong. A user experience that is clear, precise and smooth for the learner. BEEST can help here to reduce the learning curve for newcomers.</li>
-                </ul>
-              </div>
-              <div class="col-lg-3 my-auto">
-                <figure>
-                  <img src="img\carlos-muza-hpjSkU2UYSU-data.jpg" title="Unsplash - Carlos Muza Data" class="img-fluid" />
-                  <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/hpjSkU2UYSU" target="_blank" title="Unsplash - Carlos Muza Data" rel="noopener">Carlos Muza</a></figcaption>
-                </figure>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-<hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
-<div><span id="mdDesign"></span></div>
-<div>
-  <h1 class="p-2 text-center">Project: MD Design - Postgraduate Studies in Medicine</h1>
-  <h3 class="text-center">Transforming how future doctors study</h3>
-  <div class="accordion" id="accordionMD">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="heading1c"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1c" aria-expanded="true" aria-controls="collapse1c">What was the aim of this project?</button></h2>
-      <div id="collapse1c" class="accordion-collapse collapse show" aria-labelledby="heading1c" data-bs-parent="#accordionMD">
-        <div class="accordion-body">
-          <div class="row">
-            <div class="col-lg my-auto">
-              <p class="mb-0">UQ's Medicine Faculty is redesigning its postgraduate medicine course to be 4 x 1-year-long courses, rather than 32 individual courses. This means we are combining the themes, content and assessment of 8 x 12-week courses into 1 x 32-week course. This redesign has been prompted by doctors in the field and current students raising concerns that the areas of learning are not integrated well enough. Students are out practicing using compartmentalised knowledge, rather than applying their skills holistically to each given situation. In an attempt to rectify this, the entire program has been reduced to its fundamentals for year one and put back together again.</p>
-              </div>
-              <div class="col-lg-3">
-                <figure><img src="img/ux-indonesia-design.jpeg" alt="UX Indonesia - Design" class="img-fluid" />
-                  <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/qC2n6RQU4Vw" title="UX Indonesia - Unsplash" target="_blank" rel="noopener">UX Indonesia</a></figcaption>
-                </figure>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="heading2c"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2c" aria-expanded="false" aria-controls="collapse2c">Who were the stakeholders?</button></h2>
-      <div id="collapse2c" class="accordion-collapse collapse" aria-labelledby="heading2c" data-bs-parent="#accordionMD">
-        <div class="accordion-body">
-          <div class="row">
-            <div class="col-lg">
-              <p>The stakeholders in the Faculty of Medicine are:</p>
-              <ul>
-                <li>Academics collaborating on assessment and learning content and delivering classes</li>
-                <li>Professional staff developing and maintaining learning content</li>
-                <li>Administrative staff responding to student and staff inquiries</li>
-                <li>The MD Project Team leading the design and development of the new program</li>
-              </ul>
-              <p>The stakeholders in the broader context of the university are:</p>
-              <ul class="mb-0">
-                <li>Learning designers and academics in other schools outside of the Faculty of Medicine; the School of Biomedical Sciences, the School of Public Health, and the School of Philosophy.</li>
-                <li>The central teams supporting the project team, academics, and professional staff; Digital Learning Uplift team, eLearning Support, IT Support</li>
-                <li>The students studying the new program</li>
-              </ul>
-            </div>
-            <div class="col-lg-3 my-auto">
-              <figure>
-                <img src="img\campaign-creators-gMsnXqILjp4-business-meeting.jpg" title="Unsplash - Campaign Creators Business Meeting" class="img-fluid" />
-                <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/gMsnXqILjp4" target="_blank" title="Unsplash - Campaign Creators Business Meeting" rel="noopener">Campaign Creators</a></figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="heading3c"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3c" aria-expanded="false" aria-controls="collapse3c">What was my role in the project?</button></h2>
-      <div id="collapse3c" class="accordion-collapse collapse" aria-labelledby="heading3c" data-bs-parent="#accordionMD">
-        <div class="accordion-body">
-          <div class="row">
-            <div class="col-lg">
-              <p>This is my current full-time learning design role. I am currently working on the assessment regime for year two, and developing content in collaboration with the stakeholders above for year one and two in several subsections of the program:</p>
-              <ul>
-                <li>The Assessment Working Group; designing and developing the assessment schedule for years 1-4</li>
-                <li>Clinical and Practical Skills</li>
-                <li>Advocacy and Public Health</li>
-                <li>Ethics and Law</li>
-                <li>Rural and Remote Medicine</li>
-              </ul>
-              <p class="mb-0">I am also using the learnings from my project on the BEEST at Monash to bring responsive design and incorporating quality user experience into the learning design to UQ's Medicine course. I have designed a similar application for UQ's LearnX and added Bootstrap, FontAwesome and custom CSS and JS to the platform to produce a LearnX course that is responsive across devices. The working title is the MEDI7100 Code Centre - <a title="MEDI7100 Code Centre" href="medi7100codecentre.html" target="_blank" rel="noopener">view the code centre here</a>. I have built, iterated and continue to maintain this web application. Because it is built based on Bootstrap v5.2, and we are referencing this library in LearnX, there will be very little maintainence required due to the static nature of this library. I have begun to develop Professional Development (PD) for academic and professional staff, which includes recent research around user experience so that they can utilise this web application to build learning that meets their brief, plus is an interesting user experience for the students without the need to code.</p>
-            </div>
-            <div class="col-lg-3 my-auto">
-              <figure>
-                <img src="img\john-schnobrich-FlPc9_VocJ4-training.jpg" title="Unsplash - John Schnobrich Training" class="img-fluid" />
-                <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/FlPc9_VocJ4" target="_blank" title="Unsplash - John Schnobrich Training" rel="noopener">John Schnobrich</a></figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="heading4c">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4c" aria-expanded="true" aria-controls="collapse4c">What was the result?</button>
-      </h2>
-      <div id="collapse4c" class="accordion-collapse collapse" aria-labelledby="heading4c" data-bs-parent="#accordionMD">
-        <div class="accordion-body">
-          <div class="row">
-            <div class="col-lg">
-              <p>Initially, students and staff were dubious of the program's success. Integrating such a broad spectrum of knowledge and skills while maintaining the standards set by UQ would result in chaos, and frustrated stakeholders. After 18 months of planning, and 10 weeks of the program being delivered, opinions of all the critical stakeholders has shifted to accept the change, and students are excited. With the advent of a project team we are also getting a much quicker feedback loop with students on content organisation and assessment. This means closing feedback loops in hours, instead of weeks or whole iterations of a course.</p>
-              <p class="mb-0">Students see the results of providing feedback and continue to be open with us about improving their experience. To me, this close relationship with the student base is the key to success of the change. If academics see students engaging and enjoying themselves, regardless of how much work is required to continue the program in this fashion they will do it. <strong>While there are no definitive results of success 10 weeks into the delivery</strong>, the murmurs of unwinding the changes and returning to the old delivery from academics and student reprasentatives alike have stopped.</p>
-            </div>
-            <div class="col-lg-3 my-auto">
-              <figure>
-                <img src="img\kenny-eliason-KYxXMTpTzek-on-time.jpg" title="Unsplash - Kenny Eliason On Time" class="img-fluid" />
-                <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/KYxXMTpTzek" target="_blank" title="Unsplash - Kenny Eliason On Time" rel="noopener">Kenny Eliason</a></figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
-<div><span id="musicPerf"></span></div>
-<div>
-  <h1 class="p-2 text-center">Project: Music Performance in the Pandemic</h1>
-  <h3 class="text-center">Automating Google Drive for the good of music</h3>
-  <div class="accordion" id="accordionMusicPerfAcc">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="heading1d"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1d" aria-expanded="true" aria-controls="collapse1d">What was the aim of this project?</button></h2>
-      <div id="collapse1d" class="accordion-collapse collapse show" aria-labelledby="heading1d" data-bs-parent="#accordionMusicPerfAcc">
-        <div class="accordion-body">
-          <div class="row">
-            <div class="col-lg my-auto">
-              <p class="mb-0">When all students and staff were sent home from Monash, music and performance students and staff faced a unique issue. So many of the courses relied on assessment of a live performance component. With the inability to be in the same space how would musicians form and perform in a band for their assessment? Even if they could, how would they submit? How would that submission be disseminated to relative markers? Enter myself as an Educational Designer in Arts working with the Music Faculty and Matt Chen, an Educational Designer from IT. Between us we used Google Suite and Apps Scripts to automate a huge amount of online work for music and drama assessment during Semester 1 of 2021, which prevented a complete shut down of the courses at the time.</p>
-            </div>
-            <div class="col-lg-3 my-auto">
-              <figure>
-                <img src="img\sam-moghadam-khamseh-T9OjDl5SbcM-live-music.jpg" title="Unsplash - Sam Moghadam Khamseh Live Music" class="img-fluid" />
-                <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/T9OjDl5SbcM" target="_blank" title="Unsplash - Sam Moghadam Khamseh Live Music" rel="noopener">Sam Moghadam Khamseh</a></figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="heading2d"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2d" aria-expanded="false" aria-controls="collapse2d">Who were the stakeholders?</button></h2>
-      <div id="collapse2d" class="accordion-collapse collapse" aria-labelledby="heading2d" data-bs-parent="#accordionMusicPerfAcc">
-        <div class="accordion-body">
-          <div class="row">
-            <div class="col-lg my-auto">
-              <ul class="mb-0">
-                <li>Music and theatre students</li>
-                <li>Music and theatre staff</li>
-                <li>Arts faculty senior academics and administrative staff</li>
-                <li>Arts teaching support professional staff</li>
-              </ul>
-            </div>
-            <div class="col-lg-3 my-auto">
-              <figure>
-                <img src="img\chris-montgomery-smgTvepind4-zoom.jpg" title="Unsplash - Chris Montgomery Zoom" class="img-fluid" />
-                <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/smgTvepind4" target="_blank" title="Unsplash - Chris Montgomery Zoom" rel="noopener">Chris Montgomery</a></figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-    <h2 class="accordion-header" id="heading3d"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3d" aria-expanded="false" aria-controls="collapse3d">What was my role in the project?</button></h2>
-    <div id="collapse3d" class="accordion-collapse collapse" aria-labelledby="heading3d" data-bs-parent="#accordionMusicPerfAcc">
-      <div class="accordion-body">
-        <div class="row">
-          <div class="col-lg">
-            <p>I wireframed the entire onine assessment and marking process for music performance, which was then applied to the theatre courses as well. The steps involved:</p>
-            <ol>
-              <li>Sell my idea for online performance assessment to the Associate Dean for Education in Arts, Dean of the Music School and leader of Teaching Support for the Faculty of Arts.</li>
-              <li>Engage Matt for support to execute the scripts required to fire off several steps automatically across the Google Suite</li>
-              <li>Gather student data for assessment:
-                <ul class="list-lower-alpha">
-                  <li>Student repertoire for the 6 performance units/200 students across 6 semesters</li>
-                  <li>Connect students to relative markers. In performance at least 2 markers for each performance are required. A Monash staff member plus an instrumental specialist for the instrument the assessed student is playing</li>
-                </ul>
-              </li>
-            </ol>
-            <p>From here, the step-by-step process an assessment would pass through was as follows:</p>
-            <ol class="mb-0">
-              <li>Submit their repertoire listing for their performance unit, including their instrument and any accompanying artists via a Google Form</li>
-              <li>Google then automatically created a folder for each student with subfolders for each piece of their repertoire plus a 
-              for charts</li>
-              <li>Each student then received an automated email linking to another form to upload their video-recorded performances</li>
-              <li>Once the folders from step 2 were all populated with videos:
-                <ul class="list-lower-alpha">
-                  <li>Students were sent a view link to their Google Drive folder to submit to Moodle</li>
-                  <li>Matt and I were notified of the submission end date for each unit group. On this date, we used data that had all the markers' names, emails, students they were to mark, and instrumental specialty if they had one. We then automated injecting sharing permissions into the folders they were meant to have access to</li>
-                </ul>
-              </li>
-              <li>Once permissions were injected, Google sent markers a document with a list of students to mark and dates that marks were due</li>
-              <li>Once the date for markers to be completed was passed, students were then sent an automated email with a link to their marks and feedback</li>
-              <li><strong>Note</strong>: Matt, the course coordinator, and I all had the ability to manually override due dates for individual students for extensions and markers to extend the individual marking deadline</li>
-            </ol>
-          </div>
-          <div class="col-lg-3 my-auto">
-            <figure>
-              <img src="img\junior-ferreira-7esRPTt38nI-process.jpg" title="Unsplash - Junior Ferreira Process" class="img-fluid" />
-              <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/7esRPTt38nI" target="_blank" title="Unsplash - Junior Ferreira Process" rel="noopener">Junior Ferreira</a></figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="heading4d">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4d" aria-expanded="true" aria-controls="collapse4d">What was the result?</button>
-    </h2>
-    <div id="collapse4d" class="accordion-collapse collapse" aria-labelledby="heading4d" data-bs-parent="#accordionMusicPerfAcc">
-      <div class="accordion-body">
-        <div class="row">
-          <div class="col-lg">
-            <p>First and foremost, courses continued, students didn't get delayed, casual and contract staff didn't lose their jobs and all stakeholders gained incredible new skills to play and record together online. Secondly, the Faculty gained a highly automated process in the future for when students weren't able to perform live for whatever the reason may be. And finally, Matt, the music and theatre staff, and I all gained an incredible amount of experience dealing with high-stress students and technology none of us had used to this extent before.</p>
-            <p>While overall compared to years where students could attend face to face, the quantitative feedback was down from an average of half a point, the comments from students in the qualitative feedback was overall incredibly grateful to all the staff for getting the job done in an incredibly difficult time, and not delaying students' progress further.</p>
-            <p class="mb-0">Staff were overwhelmed with what Matt and I were able to achieve using the Google Suite. That two people could automate the work that should have had a team dedicated to it was something of a miracle, the right people with the right attitude and skillset in the right place at the right time. We minimised revenue loss, job losses, and time lost and created a process that was essentially reduced to clicking a few buttons at the right time to produce automations for the cohort. A win I am immensely proud of being a music student and musician myself.</p>
-          </div>
-          <div class="col-lg-3 my-auto">
-            <figure>
-              <img src="img\ross-sneddon-sWlDOWk0Jp8-strategy.jpg" title="Unsplash - Ross Sneddon Strategy" class="img-fluid" />
-              <figcaption class="text-center">Image from Unsplash - <a href="https://unsplash.com/photos/sWlDOWk0Jp8" target="_blank" title="Unsplash - Ross Sneddon Strategy" rel="noopener">Ross Sneddon</a></figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-    <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
-    <div><span id="research"></span></div>
-    <div>
-      <h1 class="p-2 text-center">Research</h1>
-      <div class="row">
-        <div class="col-lg" role="button" onclick="qualityTL()">
-          <h3 class="text-center">Balancing Quality in Teaching and Research</h3>
-          <h6 class="text-center">A systematic approach to improving teaching and learning in higher education</h6>
-          <p class="text-center"><i class="fa-solid fa-scale-balanced fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
-        </div>
-        <div class="col-lg" role="button" onclick="learningInAction()">
-          <h3 class="text-center">Experience and Reflection: Learning in Action</h3>
-          <h6 class="text-center">Comparing modern models of learning for the betterment of international students</h6>
-          <p class="text-center"><i class="fa-solid fa-bolt fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
-        </div>
-      </div>
-    </div> 
-    <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
-    <div><span id="qualityTL"></span></div>
-    <div>
-      <h1 class="p-2 text-center">Research: Building a Quality Balance in Teaching and Research</h1>
-      <h3 class="text-center">A systematic approach to improving teaching and learning in higher education</h3>
-      <div class="row">
-        <div class="col-lg">
-          <h4>Synopsis</h4>
-          <p>This paper explores the history of higher education (HE) and what has led to the current tense state, where instead of a balanced approach to managing and implementing quality teaching and research, there is pressure either directly or indirectly to favour research by HE providers. My approach was not to simply say that higher education needs to implement teaching heavy positions. Instead, it was to dive deeper into what makes research worthy of such favour, and how higher education in Australia can implement a similar path to balance value for teaching. The main discovery was systems that are in place to measure research, and rank universities based on their research are a priority of the universities themselves. If a rigorous system of reviewing and ranking teaching and learning quality could be created and put in place, we would see external ranking systems by independent bodies rank universities on teaching and learning quality as well as research quality. The main limitations of this study were the unclear nature of financial reports in relation to funding and expenditure on teaching and learning, and an absence of literature on higher education institutions implementing processes for measuring teaching and learning quality. Download the full paper by clicking the icon.</p>
-        </div>
-        <div class="col-lg-3 my-auto">
-          <a class="text-decoration-none" role="button" href="https://drive.google.com/file/d/1921yQDK0C5D0jhsiRLEBffwUpIPAZDB3/view?usp=sharing" target="_blank" title="Timothy Scholl - Building a Quality Balance in Teaching and Research full paper" rel="noopener">
-            <p class="text-center"><i class="fa-solid fa-scale-balanced fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
-            <h6 class="text-center text-ts">Download the full paper</h6>
-          </a>
-        </div>
-      </div>
-    </div>
-    <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
-    <div><span id="learningInAction"></span></div>
-    <div>
-      <h1 class="p-2 text-center">Research: Experience and Reflection: Learning in Action</h1>
-      <h3 class="text-center">A systematic approach to improving teaching and learning in higher education</h3>
-      <div class="row">
-        <div class="col-lg">
-          <h4>Synopsis</h4>
-          <p>Exploring Experiential Learning (EL) and Community Service Learning (CSL) further to improve my own practice as an educator was the focus of this paper. While experiential learning is becoming more prevalent in its many forms such as Problem/Project Based Learning (PBL) and Social Justice Learning (SJL) I wanted to further understand how the theories that underpin these practices could possibly be applied to the international student experience in Australia. My findings were as follows. To implement a mentoring program and language exchange in the institution I was employed at would help solve two major issues; language acquisition and development, and exploitation of students in unfamiliar work and study conditions. All too familiar are stories of international students working 50+ hours a week, cash in hand, while studying full time, 20+ hours per week, to support themselves.</p>
-          <p>Mentors who have been in the country for 2+ years could provide new students incredible insight into navigating Australia's system to ensure fairness and safety while in the country. Secondly, language acquisition, while encouraged in the student's home country to achieve a high enough level of confidence with language to attain a position in an Australian institution, tends to come to a halt once enrolled in study due to many competing factors for a student's time and also cultural differences. A language exchange would see local and international students share language knowledge, build relationships and counter the stagnation of language acquisition while also familiarising participants with unfamiliar cultural expectations and norms. Download the full paper by clicking the icon.</p>
-        </div>
-        <div class="col-lg-3 my-auto">
-          <a class="text-decoration-none" role="button" href="https://drive.google.com/open?id=1zw1XKvKWwP8Lm__r7WKzhxdoyRuzN2Hm" target="_blank" title="Timothy Scholl - Experiential Learning and Community Service Learning Compared" rel="noopener">
-            <p class="text-center"><i class="fa-solid fa-bolt fa-7x text-ts mx-auto iconBtn border border-3 border-ts rounded p-2"></i></p>
-            <h6 class="text-center text-ts">Download the full paper</h6>
-          </a>
-        </div>
-      </div>
-    </div>
-    <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
-    <div><span id="contact"></span></div>
-    <h1 class="p-2 text-center">Contact Me</h1>
-    <div class="row w-50 mx-auto">
-      <div class="col-lg my-auto">
-        <h3 class="text-center">Get in touch</h3>
-        <p class="text-center"><a href="https://www.linkedin.com/in/tim-scholl/" target="_blank" title="Tim Scholl - LinkedIn" rel="noopener"><i class="fa-brands fa-linkedin text-ts iconBtnSm"></i></a> LinkedIn - <a href="https://www.linkedin.com/in/tim-scholl/" target="_blank" title="Tim Scholl - LinkedIn" rel="noopener">My LinkedIn Profile</a></p>
-        <p class="text-center"><i class="fa-solid fa-inbox text-ts iconBtnSm"></i> Email - <span class="emailToCopy">t.scholl87@gmail.com</span> <span class="badge text-bg-ts copyBadge align-top" role="button">Click to copy email address</span></p>
-      </div>
-      <div class="col mx-auto">
-        <img src="img/TimSchollProfilePic3.jpeg" alt="Tim Scholl Profile Pic 3" class="img-fluid mx-auto" />
-      </div>
-    </div>        
-    <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
-    <div><span id="sources"></span></div>
-    <div>
-      <h1 class="p-2 text-center">Sources</h1>
-      <h3 class="text-center">What I read and listen to</h3>
-      <div class="row row-cols-1 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card h-100">
-            <img class="img-fluid card-img-top" src="img\Nielsen_Norman_Group_logo_2022.png" alt="Nielson Norman Group Logo" />
-            <div class="card-body">
-              <h3 class="card-title text-center mt-3">Nielson Norman Group</h3>
-              <h5 class="text-center"><i class="fa-solid fa-laptop text-ts"></i> Website - NN Group</h5>
-              <p class="card-text">Globally renowned UX experts. With articles for beginners in UX through to more advanced and complex concepts, NN/Group is the first place I go to for answers.</p>
-              <p class="text-center"><a href="https://www.nngroup.com/" target="_blank" title="Nielson Norman Group Website" rel="noopener">Nielson Norman Group Website</a></p>
-              <h5 class="text-center"><i class="fa-solid fa-podcast text-ts"></i> Podcast - NN Group</h5>
-              <p class="card-text">On top of offering top class research, the group provides a podcast with interviews from experts in the field that do the hard yards and walk the talk. Click below to go to their podcast page and find the link for your preferred podcast platform.</p>
-              <p class="text-center"><a href="https://podcasters.spotify.com/pod/show/nngroup" target="_blank" title="NN Group Podcast" rel="noopener">NN Group Podcast page</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img class="img-fluid card-img-top" src="img\DiaryofaCEO.jpg" alt="Diary of a CEO logo"/>
-            <div class="card-body">
-              <h3 class="card-title text-center">Steven Bartlett</h3>
-              <h5 class="text-center"><i class="fa-solid fa-laptop text-ts"></i> Website - Steven Bartlett</h5>
-              <p class="card-text">Steven Bartlett's is a well known digital marketing entrepeneur. Following his ventures and product releases are a great lesson in UX and product design.</p>
-              <p class="text-center"><a href="https://stevenbartlett.com/" target="_blank" title="Steven Bartlett's Website" rel="noopener">Steven Bartlett's Website</a></p>
-              <h5 class="text-center"><i class="fa-solid fa-podcast text-ts"></i> Podcast - Diary of a CEO</h5>
-              <p>In amongst many other ventures, he now leads one of the most consistently popular pod/vodcasts; Diary of a CEO. Interviewing experts in multiple fields focusing on health and wellbeing. My personal favourites have been Simon Sinek, Johann Hari, Julian Treasure and Dr. Tali Sharot.</p>
-              <p class="text-center"><a href="https://stevenbartlett.com/the-diary-of-a-ceo-podcast/" target="_blank" title="Diary of a CEO Podcast" rel="noopener">Diary of a CEO Podcast page</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img class="img-fluid card-img-top" src="img\feedback for learning.jpg" alt="Feedback for the journey"/>
-            <div class="card-body">
-              <h3 class="card-title text-center">Michael Henderson</h3>
-              <h5 class="text-center"><i class="fa-solid fa-laptop text-ts"></i> Website - Feedback for learning</h5>
-              <p class="card-text">Michael Henderson and Michael Phillips are modern educational researchers at Monash that I studied with. I find their attitude inspiring. To never stop wanting to reflect and learn.</p>
-              <p class="text-center"><a href="https://feedbackforlearning.org/" target="_blank" title="Feedback for learning" rel="noopener">Feedback for learning website</a></p>
-              <h5 class="text-center"><i class="fa-solid fa-podcast text-ts"></i> Podcast - Meet the Education Researcher</h5>
-              <p>This podcast is produced by Neil Selwyn, who works alongside Michael Henderson. While not directly related to the project, this podcast shares many of the same views and attitudes. Asking difficult questions, engaging people who are open to change. Short, sharp, and well worth a listen.</p>
-              <p class="text-center"><a href="https://podcasts.apple.com/au/podcast/meet-the-education-researcher/id1230763892" target="_blank" title="Meet the Education Researcher podcast page" rel="noopener">Meet the Education Researcher Podcast page</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr class="w-75 border border-3 border-ts rounded opacity-50 mx-auto">
-      <h3 class="text-center">What did I use to build this site?</h3>
-      <div class="row">
-        <div class="col-lg">
-          <h4 class="text-center"><i class="fa-brands fa-github"></i> Github</h4>
-          <p>Github is an online development hub. It also has a public pages space so you can build web pages - like this one - and applications - like BEEST and the Code Centre - all for free. The only catch with the free version is everyone gets to see your code, but that's what github is all about. Collaborating and innovating. Taking what other people have built and making it work to solve a problem.</p>
-        </div>
-        <div class="col-lg">
-          <h4 class="text-center"><i class="fa-brands fa-bootstrap"></i> Bootstrap</h4>
-          <p>Bootstrap is the most referenced design library on the internet. I have used it to style and format this site, the BEEST, the Code Centre and many other projects to improve user experience, look and feel of online products. Without Bootstrap this would all be a bunch of plain text on a page. Boring!</p>
-        </div>
-        <div class="col-lg">
-          <h4 class="text-center"><i class="fa-solid fa-font-awesome"></i> Font Awesome</h4>
-          <p>Font Awesome is the most highly used icon library on the internet. It was one of the first to be created, and has stood the test of time to get to version 6. <strong>Fun fact</strong>: it is the reason why so many icon libraries use the <code>&lt;i&gt;</code> element to display icons and why this element is no longer the standard for italics - instead we use the <code>&lt;em&gt;</code> element. The free version gives you access to just over 2000 icons. The full version has just over 20000 icons. It can take a good project and make it great.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="my-6"></div>
-<nav class="navbar fixed-bottom navbar-dark text-bg-ts mt-5">
-  <div class="container-fluid">
-    <span class="navbar-text text-white">Made with <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/" target="_blank" title="Get Bootstrap" rel="noopener">Bootstrap v5.2</a>, <a href="https://fontawesome.com/search?o=r&m=free" target="_blank" title="Font Awesome v6 Free Icon Search" rel="noopener">FontAwesome v6.1</a> by Tim Scholl. Last updated 30th November, 2025.</span>
-  </div>
-</nav>
-<a class="text-bg-ts p-3 rounded" data-bs-toggle="tooltip" data-bs-title="Back to top" data-bs-placement="top" role="button" id="bttBtn" style="position: fixed; bottom: 70px; right:50px; display: none;" onclick="javascript:window.scrollTo(0, 0);"><i class="fa-solid fa-arrow-up fa-2x"></i></a>
-<script type="text/javascript">
-var $temp = $('<input>');
-$('.copyBadge').on('click', function (){
-   var $copyBadge = $(this);
-   var $email = $(this).prev().text();
-   var $copyBadgeHTML = $(this).html();
-   $('body').append($temp);
-   $temp.val($email).select();
-   document.execCommand('copy');
-   $temp.remove();
-   $copyBadge.html('<span style="color: var(--bs-bg-color) !important" class="fa fa-check"></span> Email copied');
-   window.setTimeout(function () {
-    $copyBadge.html($copyBadgeHTML);
-  }, 2000);
-});
- // Get the button
- let bttBtn = document.getElementById("bttBtn");
-    
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function(){scrollFunction()};
-    
-    function scrollFunction(){
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        bttBtn.style.display = "block";
-      } else {
-        bttBtn.style.display = "none";
-      }
+  </footer>
+
+
+  <!-- ============================================================
+       BACK TO TOP BUTTON
+  ============================================================ -->
+  <button id="bttBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+          title="Back to top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+
+  <!-- ============================================================
+       SCRIPTS
+       Bootstrap bundle (includes Popper) from CDN — minified
+  ============================================================ -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // ── Initialise Bootstrap tooltips ──
+    window.addEventListener('load', function () {
+      const tooltipEls = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+      tooltipEls.forEach(el => new bootstrap.Tooltip(el));
+    });
+
+    // ── Active nav link on scroll ──
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navbar .nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop - 80) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // ── Back to top visibility ──
+    window.addEventListener('scroll', () => {
+      document.getElementById('bttBtn').style.display =
+        window.scrollY > 300 ? 'flex' : 'none';
+    });
+    // Centre the icon in the round button
+    document.getElementById('bttBtn').style.alignItems = 'center';
+    document.getElementById('bttBtn').style.justifyContent = 'center';
+
+    // ── Copy email to clipboard ──
+    function copyEmail() {
+      const email = document.getElementById('emailAddr').textContent;
+      const btn   = document.getElementById('copyEmailBtn');
+      navigator.clipboard.writeText(email).then(() => {
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = 'Copy email'; }, 2000);
+      });
     }
-</script>
+  </script>
+
 </body>
 </html>
