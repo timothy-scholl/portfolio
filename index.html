@@ -14,7 +14,7 @@
   <title>Tim Scholl — Portfolio</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="https://timothy-scholl.github.io/portfolio/tim-smile-favicon.png" type="image/png">
+  <link rel="icon" href="tim-smile-favicon.png" type="image/png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -276,6 +276,16 @@
       color: var(--ts-teal);
       text-decoration: underline;
     }
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border: 3px solid var(--ts-navy);
+    }
+    .copy-email-button {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+    }
 
     /* ── Sources cards ── */
     .source-card {
@@ -362,7 +372,7 @@
 
       <!-- Brand / logo -->
       <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
-        <img src="https://timothy-scholl.github.io/portfolio/tim-smile-favicon.png"
+        <img src="tim-smile-favicon.png"
              alt="Tim Scholl" width="36" height="36">
         <span class="fw-bold" style="font-family:'Manrope',sans-serif;font-size:0.95rem">Tim Scholl</span>
       </a>
@@ -454,7 +464,7 @@
 
     <!-- ── HERO ─────────────────────────────────────────────── -->
     <section class="hero text-center">
-      <img src="https://timothy-scholl.github.io/portfolio/tim-smile-favicon.png"
+      <img src="tim-smile-favicon.png"
            alt="Tim Scholl" width="72" height="72"
            class="rounded-circle mb-3 border border-3 border-ts">
       <h1>Tim Scholl</h1>
@@ -1017,7 +1027,7 @@
       <div class="project-org">Monash University — Faculty of Arts / IT</div>
       <h2 class="project-title">Music performance in the pandemic</h2>
       <p class="project-summary">
-        Co-built a fully automated Google Suite system that kept music and theatre performance
+        Co-built a fully automated Google Workspace system that kept music and theatre performance
         assessment running through COVID lockdowns — preventing course cancellations, protecting
         casual staff jobs, and creating a reusable process for future disruptions.
       </p>
@@ -1025,7 +1035,7 @@
         <span class="tag">Automation</span>
         <span class="tag">Google Apps Script</span>
         <span class="tag">Process Design</span>
-        <span class="tag">Google Suite</span>
+        <span class="tag">Google Workspace</span>
       </div>
 
       <div class="timeline-wrap">
@@ -1162,8 +1172,7 @@
           <div>
             <img src="img/TimSchollProfilePic3.jpeg"
                  alt="Tim Scholl"
-                 class="rounded-circle mb-2"
-                 style="width:120px;height:120px;object-fit:cover;border:3px solid #004A5E">
+                 class="rounded-circle mb-2 profile-photo">
           </div>
           <p class="mb-2">
             <i class="fa-brands fa-linkedin text-ts me-2"></i>
@@ -1176,8 +1185,8 @@
             <i class="fa-solid fa-inbox text-ts me-2"></i>
             <span id="emailAddr">t.scholl87@gmail.com</span>
             <button id="copyEmailBtn"
-                    class="btn btn-outline-secondary btn-sm ms-2"
-                    onclick="copyEmail()" style="font-size:0.7rem;padding:2px 8px">
+                    class="btn btn-outline-secondary btn-sm ms-2 copy-email-button"
+                    onclick="copyEmail()">
               Copy email
             </button>
           </p>
@@ -1318,21 +1327,38 @@
     // ── Active nav link on scroll ──
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.navbar .nav-link');
+    const navGroups = {
+      '#abb-projects': ['abb-projects', 'compliance-uplift', 'learning-hour', 'tech-pd-days'],
+      '#uni-projects': ['uni-projects', 'ats1665', 'beest', 'md-design', 'music-perf'],
+      '#research': ['research', 'research-quality', 'research-learning']
+    };
 
-    window.addEventListener('scroll', () => {
+    function updateActiveNav() {
       let current = '';
       sections.forEach(section => {
         if (window.scrollY >= section.offsetTop - 80) {
           current = section.getAttribute('id');
         }
       });
+
+      let activeHref = '#' + current;
+      for (const [parentHref, sectionIds] of Object.entries(navGroups)) {
+        if (sectionIds.includes(current)) {
+          activeHref = parentHref;
+          break;
+        }
+      }
+
       navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
+        if (link.getAttribute('href') === activeHref) {
           link.classList.add('active');
         }
       });
-    });
+    }
+
+    window.addEventListener('scroll', updateActiveNav);
+    window.addEventListener('load', updateActiveNav);
 
     // ── Back to top visibility ──
     window.addEventListener('scroll', () => {
